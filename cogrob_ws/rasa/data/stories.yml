@@ -1,0 +1,37 @@
+version: "3.1"
+
+stories:
+
+- story: conversation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: purpose_bot
+  - action: utter_purpose
+
+- story: form interjection
+  steps:
+    - action: person_form
+    - active_loop: person_form
+    - or:
+      - intent: count_people
+      - intent: ask_with_info
+    - action: utter_handle_form
+    - action: person_form
+
+- story: new search
+  steps:
+    - action: utter_ask_new_search
+    - intent: affirm
+    - action: utter_ask_other_info
+
+- story: new search
+  steps:
+    - action: utter_ask_new_search
+    - intent: deny
+    - action: utter_goodbye
+
+- story: Confirm information
+  steps:
+  - intent: inform_info
+  - action: utter_remember

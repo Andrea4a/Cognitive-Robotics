@@ -1,0 +1,235 @@
+version: "3.1"
+
+rules:
+
+- rule: ask search after thanks
+  steps:
+  - intent: thanks
+  - action: action_all_slots_reset
+  - action: utter_ask_new_search
+  
+- rule: Bot doesn't understand
+  steps:
+  - intent: nlu_fallback
+  - action: utter_dont_understand
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: action_all_slots_reset
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say hi i'm pepper anytime the user says hi
+  conversation_start: true
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: Ask information when not given
+  steps:
+    - intent: ask_with_no_info
+    - action: action_all_slots_reset
+    - action: utter_no_info
+    - action: person_form
+    - active_loop: person_form
+
+
+- rule: Submit information form
+  condition:
+  # Condition that form is active.
+  - active_loop: person_form
+  steps:
+  # Form is deactivated
+  - action: person_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_correct_entities_values
+  - action: action_submit_find
+
+- rule: another search
+  steps:
+    - action: utter_searching_person
+    - intent: affirm
+
+- rule: no another search
+  steps:
+    - action: utter_searching_person
+    - intent: deny
+
+- rule: ask with info
+  condition:
+    - active_loop: null
+  steps:
+    - intent: ask_with_info
+    - action: action_correct_entities_values
+    - action: person_form
+    - active_loop: person_form
+
+
+- rule: ask other info and yes
+  steps:
+    - action: utter_ask_other_info
+    - intent: affirm
+    - action: person_form
+    - active_loop: person_form
+
+- rule: give explanation
+  condition:
+    - active_loop: person_form
+  steps:
+    - intent: explain
+    - action: utter_explain
+
+- rule: stop the form when info is finish
+  condition:
+  - active_loop: person_form
+  steps:
+    - intent: stop_form
+    - action: action_correct_entities_values
+    - action: action_submit_find
+    - action: action_deactivate_loop
+    - active_loop: null
+
+- rule: numbers gender
+  steps:
+    - intent: male_female
+    - action: action_submit_gender
+
+- rule: new ranking
+  steps:
+    - intent: new_ranking
+    - action: action_submit_ranking
+
+- rule: ask specific
+  steps:
+    - intent: ask_specific
+    - action: action_submit_specific
+
+
+- rule: ask other info and no
+  steps:
+    - action: utter_ask_other_info
+    - intent: deny
+    - action: utter_ask_new_search
+
+- rule: count people with given info
+  condition:
+    - active_loop: null
+  steps:
+    - intent: count_people
+    - action: action_correct_entities_values
+    - action: action_submit_count
+
+- rule: count with other info and yes
+  steps:
+    - action: utter_ask_other_info
+    - intent: affirm
+    - action: person_form
+    - active_loop: person_form
+
+- rule: affirm entity
+  condition:
+    - active_loop: person_form
+  steps:
+    - intent: affirm_with_entity
+    - action: person_form
+
+- rule: ask info group
+  steps:
+    - intent: group_position
+    - action: action_submit_group
+
+- rule: ask info components
+  steps:
+    - intent: group_components
+    - action: action_submit_components
+
+- rule: ask info score
+  steps:
+    - intent: group_score
+    - action: action_submit_score
+
+- rule: ask info id
+  steps:
+    - intent: ask_id
+    - action: action_submit_id
+
+- rule: deny entity
+  condition:
+    - active_loop: person_form
+  steps:
+    - intent: deny_with_entity
+    - action: person_form
+
+- rule: don't ask new search
+  steps:
+    - action: utter_ask_new_search
+    - intent: deny
+    - action: utter_goodbye
+
+- rule: don't ask new search
+  steps:
+    - action: utter_ask_new_search
+    - intent: affirm
+    - action: utter_ask_other_info
+
+- rule: Ask about gender
+  condition:
+  - active_loop: person_form
+  steps:
+  - action: utter_ask_gender
+  - intent: affirm
+  - action: person_form
+
+- rule: Ask about hat
+  condition:
+  - active_loop: person_form
+  steps:
+  - action: utter_ask_hat
+  - intent: affirm
+  - action: person_form
+
+- rule: Ask about bag
+  condition:
+  - active_loop: person_form
+  steps:
+  - action: utter_ask_bag
+  - intent: affirm
+  - action: person_form
+
+- rule: Ask about trasjectory
+  condition:
+  - active_loop: person_form
+  steps:
+  - action: utter_ask_trajectory
+  - action: person_form
+
+- rule: Handle doubt during form
+  condition:
+  - active_loop: person_form
+  steps:
+  - intent: doubt
+  - action: person_form
+
+- rule: sad path
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+
+- rule: happy path
+  steps:
+  - intent: mood_great
+  - action: utter_happy
+
+- rule: sad competition path
+  steps:
+  - intent: lost_competition
+  - action: utter_sad_competition_loss
+
+
