@@ -1,0 +1,1718 @@
+version: "3.1"
+
+nlu:
+# ---------- INTENTS ----------
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hi there
+    - hello there
+    - hi pepper
+    - good morning
+    - good evening
+    - good afternoon
+    - hey there
+    - howdy
+    - greetings
+    - morning
+    - evening
+    - afternoon
+    - what's up
+    - yo
+    - hello friend
+    - hello world
+    - hey friend
+    - good day
+    - hello again
+    - hi there buddy
+    - hey mate
+    - how are you
+    - hello again, my friend
+    - hi there, it's me
+    - good to see you
+    - pleasure to meet you
+    - hey pal
+    - hiya
+    - what's going on
+    - what's happening
+    - how’s it going
+    - hi there, how are you
+    - long time no see
+    - hi buddy
+    - hey dude
+    - how’s life
+    - hi pal
+    - good to meet you
+    - top of the morning
+    - hey, how have you been
+    - it's nice to see you again
+    - hi there, how have you been
+    - how are things
+    - howdy partner
+    - hello my friend
+    - greetings and salutations
+    - what's new
+    - hi, nice to see you
+    - hey, nice to meet you
+
+- intent: mood_great
+  examples: |
+    - I'm feeling great
+    - Everything is fantastic
+    - I am very happy today
+    - Life is amazing
+    - I'm in a fantastic mood
+    - I couldn't be happier
+    - I'm so thrilled
+    - This is the best day ever
+    - I'm incredibly satisfied
+    - I'm feeling awesome
+    - Everything is going perfectly
+    - I am on cloud nine
+    - I feel wonderful
+    - This is a great moment
+    - I'm over the moon
+    - I'm in a great mood
+    - I feel so good
+    - I'm so happy right now
+    - Life couldn't be better
+    - I'm super excited
+    - I'm feeling so positive
+    - Everything is awesome
+    - I'm on top of the world
+    - I feel fantastic
+    - Today is a great day
+    - I'm absolutely delighted
+    - I'm beyond happy
+    - I'm full of joy
+    - I'm having an amazing day
+    - It's a perfect day
+    - I'm full of energy
+    - I'm loving this moment
+    - I'm overjoyed
+    - I'm in a cheerful mood
+    - My day is going great
+    - I'm so content
+    - I feel really upbeat
+    - I'm ecstatic
+    - I'm on a roll
+    - I'm full of enthusiasm
+    - Today feels magical
+    - I can't stop smiling
+    - I feel incredible
+    - It's a wonderful day
+    - I'm in high spirits
+    - I'm having such a good day
+    - I'm extremely pleased
+    - Life is beautiful
+    - Everything is just perfect
+    - I'm feeling super optimistic
+
+- intent: lost_competition
+  examples: |
+    - I lost the competition
+    - I didn't win the tournament
+    - I failed in the competition
+    - I couldn't win this time
+    - I came second in the competition
+    - I didn't make it to the finals
+    - I lost and I feel disappointed
+    - I feel sad because I lost the match
+    - I didn't achieve the result I wanted in the competition
+    - The competition didn't go well for me
+    - I was really hoping to win, but I lost
+    - I tried my best, but I still lost
+    - It was a tough competition, and I couldn't win
+    - I'm frustrated because I didn't win
+    - I lost and it feels bad
+
+
+- intent: mood_unhappy
+  examples: |
+    - I'm feeling down
+    - I'm not happy today
+    - I'm a bit sad
+    - I feel miserable
+    - Nothing is going right
+    - I'm upset
+    - I feel really bad
+    - I'm having a terrible day
+    - I'm feeling awful
+    - Life is tough right now
+    - I'm struggling today
+    - I'm not in a good mood
+    - I feel disappointed
+    - I'm so frustrated
+    - Things are not going well
+    - I feel heartbroken
+    - I’m feeling hopeless
+    - I feel lonely
+    - Today is a bad day
+    - I can't stop crying
+    - I'm in a bad mood
+    - I feel like giving up
+    - I feel overwhelmed
+    - Everything feels wrong
+    - I'm so annoyed
+    - I'm angry with myself
+    - I'm feeling miserable
+    - Life is so unfair
+    - I'm feeling depressed
+    - I feel abandoned
+    - Nothing makes sense anymore
+    - I'm not okay
+    - I feel worthless
+    - It's been a rough day
+    - I'm exhausted and upset
+    - I'm at my breaking point
+    - I can't handle this anymore
+    - I'm so tired of this
+    - I just want to give up
+    - I'm feeling really low
+    - I hate how things are
+    - I'm in pain emotionally
+    - I'm feeling empty
+    - This day is horrible
+    - I feel stuck
+    - I'm really struggling
+    - Life feels meaningless
+    - I feel like I'm failing
+    - It's just not my day
+    - I'm crying inside
+    - I feel so lost
+
+- intent: thanks
+  examples: |
+    - Ok, thanks
+    - ok, thanks
+    - Thanks a lot!
+    - Thank you!
+    - Thanks so much!
+    - Many thanks!
+    - Appreciate it!
+    - Thanks a ton!
+    - Thanks a bunch!
+    - Thank you very much!
+    - Thanks again!
+    - Thanks for your help!
+    - Thanks for the support!
+    - I appreciate it!
+    - Much appreciated!
+    - Cheers, thanks!
+    - Big thanks!
+
+- intent: goodbye
+  examples: |
+    - good by
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thanks, bye
+    - take care
+    - see ya
+    - later
+    - see you
+    - catch you later
+    - talk to you soon
+    - have a good one
+    - bye for now
+    - have a great day
+    - cheers
+    - ciao
+    - adios
+    - catch you soon
+    - see you soon
+    - it was nice talking to you
+    - I'm off
+    - gotta go
+    - till we meet again
+    - bye, take care
+    - take it easy
+    - see you next time
+    - farewell
+    - have a wonderful day
+    - peace out
+    - see you tomorrow
+    - later, alligator
+    - take care of yourself
+    - see you again
+    - bye, have a nice one
+    - I have to go now
+    - see you around, buddy
+    - keep in touch
+    - I’ll see you later
+    - bye for today
+    - so long
+    - see you when I see you
+    - catch you on the flip side
+    - have a blessed day
+    - stay safe
+    - I’m leaving now
+    - till next time
+    - goodbye, my friend
+    - bye, see you soon
+
+- intent: purpose_bot
+  examples: |
+    - What can you do?
+    - How can you help me?
+    - What are your capabilities?
+    - How can I benefit from your assistance?
+    - Can you provide information about your skills?
+    - What are you capable of?
+    - In what ways can I leverage your abilities?
+    - How can I get started?
+    - Tell me about your features
+    - What services do you offer?
+    - What is your purpose?
+    - How do I use you?
+    - Are you here to assist me?
+    - Can you help me solve problems?
+    - What kind of tasks can you handle?
+    - What’s your role?
+    - What problems can you help me solve?
+    - Can you support me in my tasks?
+    - How do you assist users?
+    - How do I ask you questions?
+    - What kind of information can you provide?
+    - What’s your function?
+    - Can you explain your purpose?
+    - What’s your main task?
+    - How are you designed to assist me?
+    - Can you describe your role?
+    - What’s the scope of your abilities?
+    - What are you trained to do?
+    - Can you solve specific problems?
+    - Are you capable of helping with specific tasks?
+    - What kind of support can you provide?
+    - What’s your expertise?
+    - What are your strengths?
+    - How do you function?
+    - Can you guide me through your features?
+    - What areas do you specialize in?
+    - Can you provide help in my tasks?
+    - Can you assist me with my questions?
+    - Are you capable of understanding my needs?
+    - How do you work?
+    - What’s your purpose in this system?
+    - How can I interact with you?
+    - What’s your role in this environment?
+    - Can you assist me in finding information?
+    - How do I make the most of your assistance?
+    - What can I ask you?
+    - Can you explain what you’re here for?
+    - Can you list your abilities?
+    - Are you programmed to help me?
+    - What tasks are you designed for?
+
+- intent: affirm
+  examples: |
+    - Yes
+    - Y
+    - yes, thanks
+    - yes, thank you
+    - Indeed
+    - yes pepper
+    - Of course
+    - That sounds good
+    - Correct
+    - Yes, it does
+    - Yes, he does
+    - Yes, she does
+    - yeah
+    - absolutely
+    - sure
+    - definitely
+    - totally
+    - yup
+    - yep
+    - that's right
+    - you got it
+    - affirmative
+    - exactly
+    - I agree
+    - right
+    - I confirm
+    - okay
+    - okay, yes
+    - yes, absolutely
+    - yes, sure
+    - sure thing
+    - yeah, that's true
+    - yes, that's correct
+    - that's true
+    - yes, exactly
+    - that's a yes
+    - uh-huh
+    - yes, please
+    - yep, that's fine
+    - agreed
+    - for sure
+    - it's true
+    - naturally
+    - obviously
+    - yes, why not
+    - yeah, okay
+    - yes, you're right
+    - certainly
+    - yes, that's it
+    - yes, definitely
+    - yeah, that's correct
+    - it's correct
+
+- intent: affirm_with_entity
+  examples: |
+    - absolutely, he [carries]{"entity":"is_with", "group":"bag_group", "value":"true"} a [suitcase]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - yeah, she [brings]{"entity":"is_with", "group":"bag_group", "value":"true"} a [knapsack]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - yes, he [puts on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cap]{"entity":"hat","value":"hat"}
+    - for sure, he [carries]{"entity":"is_with", "group":"bag_group", "value":"true"} a [briefcase]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - yes, she [is wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [beret]{"entity":"hat","value":"hat"}
+    - definitely, she [holds]{"entity":"is_with", "group":"bag_group", "value":"true"} a [purse]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - yes, he [is carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [messenger bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - absolutely, she [puts on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [bucket hat]{"entity":"hat","value":"hat"}
+    - indeed, he [has on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [top hat]{"entity":"hat","value":"hat"}
+    - yes, she [wears]{"entity":"is_with", "group":"hat_group", "value":"true"} a [trendy fedora]{"entity":"hat","value":"hat"}
+    - sure, he [brings]{"entity":"is_with", "group":"bag_group", "value":"true"} a [rucksack]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - totally, she [holds]{"entity":"is_with", "group":"bag_group", "value":"true"} a [duffel bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - absolutely, he [carries]{"entity":"is_with", "group":"bag_group", "value":"true"} a [gym bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - yes, she [is wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cowboy hat]{"entity":"hat","value":"hat"}
+    - definitely, he [puts on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [boater hat]{"entity":"hat","value":"hat"}
+    - indeed, he [has on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [hard hat]{"entity":"hat","value":"hat"}
+    - yes, he [carries]{"entity":"is_with", "group":"bag_group", "value":"true"} a [crossbody bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - sure, she [puts on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [visor]{"entity":"hat","value":"hat"}
+    - yes, he [is holding]{"entity":"is_with", "group":"bag_group", "value":"true"} a [satchel]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - absolutely, she [brings]{"entity":"is_with", "group":"bag_group", "value":"true"} a [hobo bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - indeed, he [has on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [flat cap]{"entity":"hat","value":"hat"}
+    - yes, he [is carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [shopping bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - totally, she [is wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [chef's hat]{"entity":"hat","value":"hat"}
+    - absolutely, he [puts on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cloche]{"entity":"hat","value":"hat"}
+    - for sure, she [brings]{"entity":"is_with", "group":"bag_group", "value":"true"} a [tote bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - yes, he [wears]{"entity":"is_with", "group":"hat_group", "value":"true"} a [turban]{"entity":"hat","value":"hat"}
+    - indeed, he [holds]{"entity":"is_with", "group":"bag_group", "value":"true"} a [wristlet]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - yes, she [puts on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [bonnet]{"entity":"hat","value":"hat"}
+    - definitely, he [carries]{"entity":"is_with", "group":"bag_group", "value":"true"} a [satchel]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - sure, he [wears]{"entity":"is_with", "group":"hat_group", "value":"true"} a [visor]{"entity":"hat","value":"hat"}
+    - yes, she [holds]{"entity":"is_with", "group":"bag_group", "value":"true"} a [briefcase]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - totally, he [has on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [straw hat]{"entity":"hat","value":"hat"}
+    - yes, he [is carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [duffel bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - definitely, she [is holding]{"entity":"is_with", "group":"bag_group", "value":"true"} a [shopping bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - for sure, he [puts on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [flat cap]{"entity":"hat","value":"hat"}
+    - absolutely, she [carries]{"entity":"is_with", "group":"bag_group", "value":"true"} a [bucket bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - indeed, he [wears]{"entity":"is_with", "group":"hat_group", "value":"true"} a [trilby hat]{"entity":"hat","value":"hat"}
+    - yes, she [has on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [pillbox hat]{"entity":"hat","value":"hat"}
+    - sure, he [holds]{"entity":"is_with", "group":"bag_group", "value":"true"} a [gym bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - definitely, she [wears]{"entity":"is_with", "group":"hat_group", "value":"true"} a [fedora]{"entity":"hat","value":"hat"}
+
+- intent: deny
+  examples: |
+    - No
+    - N
+    - nono
+    - no thanks
+    - no, thank you
+    - no no
+    - Never
+    - no pepper
+    - I don't think so
+    - No way
+    - No, he doesn't
+    - No, he does not
+    - No, she doesn't
+    - No, she does not
+    - No, it doesn't
+    - No, it does not
+    - Nope
+    - No you done
+    - no, i can't
+    - no, i can not
+    - does not wear it
+    - No, I haven't seen him.
+    - No, I didn't see her.
+    - No, I haven't seen it.
+    - No, I don't remember seeing him.
+    - No, she wasn't here.
+    - No, he hasn't been spotted.
+    - No, I don't think he passed by.
+    - No, I didn't see anyone matching that description.
+    - No, I haven't seen anyone like that.
+    - Nope, I didn't notice anyone like that.
+    - No, nothing like that was seen.
+    - No, that's not correct.
+    - No, that's not true.
+    - Not at all.
+    - Nope, not even close.
+    - No, that's not what I meant.
+    - No, that doesn't sound right.
+    - No, that can't be right.
+    - No, that’s incorrect.
+    - No, absolutely not.
+    - No, I can’t help with that.
+    - No, I disagree.
+    - No, I don’t agree with that.
+    - No, that’s not the case.
+    - Nope, not going to happen.
+    - No, it’s not possible.
+    - No, it doesn’t match.
+    - No, it doesn’t seem likely.
+    - Nope, I don’t think so.
+    - No, it’s not what I expected.
+    - No, I’m not sure about that.
+    - No, not now.
+
+- intent: stop_form
+  examples: |
+    - don't know more
+    - i haven't info about the person
+    - don't have any other info
+    - i don't know any other info
+    - no more info
+    - I don't have any more details about the individual.
+    - I've exhausted my knowledge about that person.
+    - There's no additional information available on him.
+    - There's no additional information available on her.
+    - Unfortunately, I can't provide any further info about the person.
+    - My knowledge about the individual is limited to what has been shared.
+    - I've reached the end of my information about that person.
+    - I don't possess any other data about them.
+    - i don't know any other info about that person.
+    - I'm unable to furnish any more information on that particular person.
+    - I've shared all the information I have about the person in question.
+    - I've provided all the available information about the person.
+    - There's no additional data that i know about them.
+    - I can't offer any more details regarding that individual.
+    - Unfortunately, I don't have any further info about the person.
+    - I've reached the limit of information on that specific person.
+    - I've shared everything I know about that individual.
+    - i don't know any additional details
+    - I'm unable to extend the information I've already provided.
+    - I've exhausted my resources on details about that person.
+    - stop asking
+    - stop
+    - enough with the question
+    - that's enough with the question
+    - Please refrain from asking any further questions.
+    - I'd appreciate it if you could stop asking me questions.
+    - Let's put an end to the questions, okay?
+    - I'd prefer if you didn't ask me any more questions.
+    - It would be great if you could avoid asking more questions.
+    - I need a break from answering questions, so let's stop.
+    - Let's keep it at that and not ask more questions.
+    - No more questions, if you don't mind.
+    - I'm reaching my limit for questions, so let's wrap it up.
+    - I've already told you everything I know.
+    - Sorry, I can't answer anything else.
+    - I have nothing more to share about that person.
+    - That's all I know for now.
+    - Sorry, that's all I can tell you.
+    - That's the limit of my information.
+    - I've said all I know.
+    - I've already shared all I can.
+    - I think I've provided everything I know.
+    - I'm done answering about this.
+    - I think that's enough for now.
+    - Let's stop here.
+    - That's all I know, sorry.
+
+- intent: deny_with_entity
+  examples: |
+    - nope, he [doesn't wear]{"entity":"is_with", "group":"hat_group", "value":"false"} a [beret]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - nah, he [doesn't have]{"entity":"is_with", "group":"bag_group", "value":"false"} a [bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - absolutely not, he [doesn't use]{"entity":"is_with", "group":"hat_group", "value":"false"} a [hat]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - not really, she [doesn't bring]{"entity":"is_with", "group":"bag_group", "value":"false"} [luggage]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - never, she [doesn't carry]{"entity":"is_with", "group":"bag_group", "value":"false"} a [rucksack]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - I don’t think so, he [doesn't hold]{"entity":"is_with", "group":"bag_group", "value":"false"} a [case]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - not at all, she [doesn't dress]{"entity":"is_with", "group":"hat_group", "value":"false"} a [fedora]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - I’m sure not, he [hasn't worn]{"entity":"is_with", "group":"hat_group", "value":"false"} a [beanie]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - nope, she [doesn't carry]{"entity":"is_with", "group":"bag_group", "value":"false"} a [carryall]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - not at all, he [hasn't brought]{"entity":"is_with", "group":"bag_group", "value":"false"} a [satchel]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - certainly not, he [doesn't wear]{"entity":"is_with", "group":"hat_group", "value":"false"} a [trilby]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - no way, she [doesn't put on]{"entity":"is_with", "group":"hat_group", "value":"false"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - not likely, he [doesn't bring]{"entity":"is_with", "group":"bag_group", "value":"false"} a [briefcase]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - nothing like that, she [doesn't have]{"entity":"is_with", "group":"bag_group", "value":"false"} a [backpack]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - that’s incorrect, she [doesn't hold]{"entity":"is_with", "group":"bag_group", "value":"false"} a [purse]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - no chance, he [hasn't worn]{"entity":"is_with", "group":"hat_group", "value":"false"} a [bucket hat]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - definitely not, she [doesn't carry]{"entity":"is_with", "group":"bag_group", "value":"false"} a [duffel bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - nope, he [doesn't wear]{"entity":"is_with", "group":"hat_group", "value":"false"} a [boater hat]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - absolutely not, she [doesn't bring]{"entity":"is_with", "group":"bag_group", "value":"false"} a [tote bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - negative, he [doesn't hold]{"entity":"is_with", "group":"bag_group", "value":"false"} a [crossbody bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - no, he [has not worn]{"entity":"is_with", "group":"hat_group", "value":"false"} a [top hat]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - absolutely not, she [doesn't put on]{"entity":"is_with", "group":"hat_group", "value":"false"} a [visor]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - never, he [doesn't carry]{"entity":"is_with", "group":"bag_group", "value":"false"} a [shopping bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - no way, she [hasn't worn]{"entity":"is_with", "group":"hat_group", "value":"false"} a [chef's hat]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - I doubt it, he [doesn't use]{"entity":"is_with", "group":"bag_group", "value":"false"} a [gym bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - absolutely not, she [doesn't bring]{"entity":"is_with", "group":"bag_group", "value":"false"} a [hobo bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - I’m afraid not, he [doesn't have]{"entity":"is_with", "group":"hat_group", "value":"false"} a [cloche]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - nope, she [doesn't carry]{"entity":"is_with", "group":"bag_group", "value":"false"} a [rucksack]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - not really, he [hasn't worn]{"entity":"is_with", "group":"hat_group", "value":"false"} a [cowboy hat]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - I don’t believe so, she [doesn't use]{"entity":"is_with", "group":"bag_group", "value":"false"} a [knapsack]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - nope, he [doesn't hold]{"entity":"is_with", "group":"bag_group", "value":"false"} a [case]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - no way, she [hasn't worn]{"entity":"is_with", "group":"hat_group", "value":"false"} a [trendy hat]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - I doubt that, he [doesn't bring]{"entity":"is_with", "group":"bag_group", "value":"false"} a [bucket bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - not possible, she [doesn't carry]{"entity":"is_with", "group":"bag_group", "value":"false"} a [duffel bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - no way, he [doesn't use]{"entity":"is_with", "group":"hat_group", "value":"false"} a [bowler hat]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - nope, he [doesn't wear]{"entity":"is_with", "group":"hat_group", "value":"false"} a [turban]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - absolutely not, she [doesn't put on]{"entity":"is_with", "group":"hat_group", "value":"false"} a [pillbox hat]{"entity":"hat", "group":"hat_group", "value":"hat"}
+
+- intent: doubt
+  examples: |
+    - i don't know
+    - i do not know
+    - No idea
+    - have no idea
+    - I have no idea
+    - Dunno
+    - I haven’t a clue
+    - I don't remember
+    - i do not remember
+    - do not remember
+    - i'ven't idea
+    - It’s a mystery to me
+    - Hmm...
+    - I’m not sure
+    - I am not sure
+    - I am not too sure
+    - i am not sur
+    - That’s exactly what I’m seeking to answer.
+    - I'm not sure.
+    - I have no clue.
+    - I'm not certain.
+    - I'm unsure.
+    - I'm not entirely convinced.
+    - I'm not confident about that.
+    - I don't have the faintest idea.
+    - I'm not entirely clear on that.
+    - I can't say for certain.
+    - I'm not 100% sure.
+    - I'm not in the know.
+    - I don't have the answer.
+    - I'm not informed on that.
+    - I'm not acquainted with that.
+    - I don't possess that information.
+    - I haven't got a clue.
+    - I'm not privy to that.
+    - I'm not in the know.
+    - I don't possess that knowledge.
+    - I'm not aware of that.
+    - I don't have that data.
+    - maybe
+    - perhaps
+    - I’m not entirely sure.
+    - I’m uncertain.
+    - I wish I knew.
+    - That’s a tough one.
+    - I haven’t the foggiest idea.
+    - I’m stumped.
+    - I’m clueless.
+    - I’m at a loss.
+    - I’m drawing a blank.
+    - Beats me.
+    - I haven’t figured it out yet.
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_with_info
+  examples: |
+    - I lost my [children]{"entity":"gender", "value":"male"}
+    - I lost my [daughter]{"entity":"gender", "value":"female"}
+    - Do you see a [boy]{"entity":"gender", "value":"male"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [sombrero]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Have you noticed a [girl]{"entity":"gender", "value":"female"} [with]{"entity":"is_with", "group":"bag_group", "value":"true"} a [backpack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Can you find someone [without]{"entity":"is_with", "group":"bag_group", "value":"false"} a [pouch]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Is there a [man]{"entity":"gender", "value":"male"} [not wearing]{"entity":"is_with", "group":"hat_group", "value":"false"} a [fedora]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - I'm searching for a [woman]{"entity":"gender", "value":"female"} [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [satchel]{"entity":"bag", "group":"bag_group", "value":"bag"}.
+    - Can you locate someone [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [helmet]{"entity":"hat", "group":"hat_group", "value":"hat"} and [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [luggage]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Do you notice a [young man]{"entity":"gender", "value":"male"} [without]{"entity":"is_with", "group":"bag_group", "value":"false"} a [tote bag]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Have you seen a [lady]{"entity":"gender", "value":"female"} [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [bonnet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you find an [old man]{"entity":"gender", "value":"male"} [not carrying]{"entity":"is_with", "group":"bag_group", "value":"false"} a [knapsack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Do you see anyone [having]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"} and [with]{"entity":"is_with", "group":"bag_group", "value":"true"} a [purse]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Are there any [males]{"entity":"gender", "value":"male"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [tam]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Is there someone [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [headgear]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - I'm looking for someone [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [case]{"entity":"bag", "group":"bag_group", "value":"bag"}.
+    - Do you see an individual [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [beanie]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you find someone [not wearing]{"entity":"is_with", "group":"hat_group", "value":"false"} a [topper]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Is there a [girl]{"entity":"gender", "value":"female"} [with]{"entity":"is_with", "group":"bag_group", "value":"true"} a [handbag]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Do you notice anyone [having]{"entity":"is_with", "group":"bag_group", "value":"true"} a [rucksack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Can you find all those [without]{"entity":"is_with", "group":"bag_group", "value":"false"} a [luggage]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - I'm in search of a [man]{"entity":"gender", "value":"male"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [bonnet]{"entity":"hat", "group":"hat_group", "value":"hat"} and [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [case]{"entity":"bag", "group":"bag_group", "value":"bag"}.
+    - Have you noticed a [male]{"entity":"gender", "value":"male"} [not carrying]{"entity":"is_with", "group":"bag_group", "value":"false"} a [knapsack]{"entity":"bag", "group":"bag_group", "value":"bag"} and [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Do you see a [boy]{"entity":"gender", "value":"male"} [putting on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [helmet]{"entity":"hat", "group":"hat_group"}?
+    - Have you noticed a [woman]{"entity":"gender", "value":"female"} [holding]{"entity":"is_with", "group":"bag_group", "value":"true"} a [handbag]{"entity":"bag", "group":"bag_group"}?
+    - Can you find a [girl]{"entity":"gender", "value":"female"} [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [satchel]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Is there a [guy]{"entity":"gender", "value":"male"} [not wearing]{"entity":"is_with", "group":"hat_group", "value":"false"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - I'm searching for a [lady]{"entity":"gender", "value":"female"} [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [sombrero]{"entity":"hat", "group":"hat_group", "value":"hat"}.
+    - Do you notice any [young men]{"entity":"gender", "value":"male"} [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [knapsack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Have you seen a [man]{"entity":"gender", "value":"male"} [not holding]{"entity":"is_with", "group":"bag_group", "value":"false"} a [purse]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Can you locate a [woman]{"entity":"gender", "value":"female"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [tam]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Is there someone [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [topper]{"entity":"hat", "group":"hat_group", "value":"hat"} and [not carrying]{"entity":"is_with", "group":"bag_group", "value":"false"} a [luggage]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Do you notice a [sister]{"entity":"gender", "value":"female"} [holding]{"entity":"is_with", "group":"bag_group", "value":"true"} a [carryall]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Have you seen any individuals [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [bonnet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you identify a [male]{"entity":"gender", "value":"male"} [having]{"entity":"is_with", "group":"bag_group", "value":"true"} a [rucksack]{"entity":"bag", "group":"bag_group", "value":"bag"} and [not wearing]{"entity":"is_with", "group":"hat_group", "value":"false"} a [helmet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - I'm in search of a [woman]{"entity":"gender", "value":"female"} [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [case]{"entity":"bag", "group":"bag_group", "value":"bag"} and [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [beanie]{"entity":"hat", "group":"hat_group", "value":"hat"}.
+    - Do you see any [girls]{"entity":"gender", "value":"female"} [without]{"entity":"is_with", "group":"bag_group", "value":"false"} a [tote bag]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Have you noticed a [young woman]{"entity":"gender", "value":"female"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [fedora]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you find all [old men]{"entity":"gender", "value":"male"} [not holding]{"entity":"is_with", "group":"bag_group", "value":"false"} a [knapsack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Is there someone [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Do you notice any [boys]{"entity":"gender", "value":"male"} [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [handbag]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Have you noticed a [gentleman]{"entity":"gender", "value":"male"} [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [headgear]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you locate a [lady]{"entity":"gender", "value":"female"} [holding]{"entity":"is_with", "group":"bag_group", "value":"true"} a [purse]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Have you seen an [elderly man]{"entity":"gender", "value":"male"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [sombrero]{"entity":"hat", "group":"hat_group", "value":"hat"} and [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [knapsack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Do you notice a [mother]{"entity":"gender", "value":"female"} [holding]{"entity":"is_with", "group":"bag_group", "value":"true"} a [satchel]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Do you see a [man]{"entity":"gender", "value":"male"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [fedora]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Is there a [woman]{"entity":"gender", "value":"female"} [not wearing]{"entity":"is_with", "group":"hat_group", "value":"false"} a [bonnet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you locate a [boy]{"entity":"gender", "value":"male"} [carrying]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Have you noticed a [girl]{"entity":"gender", "value":"female"} [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [helmet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Do you notice a [man]{"entity":"gender", "value":"male"} [putting on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [beanie]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Is there someone [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [sombrero]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Have you seen anyone [not carrying]{"entity":"is_with", "group":"hat_group", "value":"false"} a [tam]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you identify a [gentleman]{"entity":"gender", "value":"male"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [topper]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Are there any [ladies]{"entity":"gender", "value":"female"} [not wearing]{"entity":"is_with", "group":"hat_group", "value":"false"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - I'm searching for a [woman]{"entity":"gender", "value":"female"} [holding]{"entity":"is_with", "group":"hat_group", "value":"true"} a [fedora]{"entity":"hat", "group":"hat_group", "value":"hat"}.
+    - Do you notice a [young man]{"entity":"gender", "value":"male"} [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [helmet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Have you seen a [lady]{"entity":"gender", "value":"female"} [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [sombrero]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Is there someone [not carrying]{"entity":"is_with", "group":"hat_group", "value":"false"} a [beanie]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you find a person [putting on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [tam]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Have you noticed a [guy]{"entity":"gender", "value":"male"} [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [topper]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Are there any [old men]{"entity":"gender", "value":"male"} [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [bonnet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you identify a [lady]{"entity":"gender", "value":"female"} [carrying]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Do you see an [elderly man]{"entity":"gender", "value":"male"} [not wearing]{"entity":"is_with", "group":"hat_group", "value":"false"} a [fedora]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Have you noticed a [sister]{"entity":"gender", "value":"female"} [holding]{"entity":"is_with", "group":"hat_group", "value":"true"} a [helmet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you locate a [gentleman]{"entity":"gender", "value":"male"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [tam]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Do you see a [boy]{"entity":"gender", "value":"male"} [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [backpack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Is there a [woman]{"entity":"gender", "value":"female"} [not holding]{"entity":"is_with", "group":"bag_group", "value":"false"} a [knapsack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Can you find a [man]{"entity":"gender", "value":"male"} [having]{"entity":"is_with", "group":"bag_group", "value":"true"} a [tote bag]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Have you noticed a [girl]{"entity":"gender", "value":"female"} [without]{"entity":"is_with", "group":"bag_group", "value":"false"} a [satchel]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Do you notice a [lady]{"entity":"gender", "value":"female"} [with]{"entity":"is_with", "group":"bag_group", "value":"true"} a [pouch]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Have you seen someone [not carrying]{"entity":"is_with", "group":"bag_group", "value":"false"} a [carryall]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Can you locate a [gentleman]{"entity":"gender", "value":"male"} [holding]{"entity":"is_with", "group":"bag_group", "value":"true"} a [luggage]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Is there someone [without]{"entity":"is_with", "group":"bag_group", "value":"false"} a [handbag]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Have you noticed a [man]{"entity":"gender", "value":"male"} [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [satchel]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Are there any [women]{"entity":"gender", "value":"female"} [not holding]{"entity":"is_with", "group":"bag_group", "value":"false"} a [rucksack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Can you find an [elderly man]{"entity":"gender", "value":"male"} [having]{"entity":"is_with", "group":"bag_group", "value":"true"} a [tote]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Do you notice a [girl]{"entity":"gender", "value":"female"} [without]{"entity":"is_with", "group":"bag_group", "value":"false"} a [case]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Is there a [sister]{"entity":"gender", "value":"female"} [holding]{"entity":"is_with", "group":"bag_group", "value":"true"} a [knapsack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Have you noticed a [woman]{"entity":"gender", "value":"female"} [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [backpack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Do you see a [man]{"entity":"gender", "value":"male"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [fedora]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you locate a [woman]{"entity":"gender", "value":"female"} [not wearing]{"entity":"is_with", "group":"hat_group", "value":"false"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Is there a [boy]{"entity":"gender", "value":"male"} [carrying]{"entity":"is_with", "group":"hat_group", "value":"true"} a [helmet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Have you noticed a [girl]{"entity":"gender", "value":"female"} [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [sombrero]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Do you notice a [guy]{"entity":"gender", "value":"male"} [putting on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [tam]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Have you seen a [lady]{"entity":"gender", "value":"female"} [not wearing]{"entity":"is_with", "group":"hat_group", "value":"false"} a [topper]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you identify an [elderly man]{"entity":"gender", "value":"male"} [holding]{"entity":"is_with", "group":"hat_group", "value":"true"} a [bonnet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Are there any [women]{"entity":"gender", "value":"female"} [not carrying]{"entity":"is_with", "group":"hat_group", "value":"false"} a [beanie]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Do you see a [sister]{"entity":"gender", "value":"female"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Is there someone [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [helmet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Have you noticed a [gentleman]{"entity":"gender", "value":"male"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [sombrero]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you find a [young woman]{"entity":"gender", "value":"female"} [not wearing]{"entity":"is_with", "group":"hat_group", "value":"false"} a [tam]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Is there a [lady]{"entity":"gender", "value":"female"} [putting on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [topper]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Do you see an individual [holding]{"entity":"is_with", "group":"hat_group", "value":"true"} a [bonnet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Have you noticed a [guy]{"entity":"gender", "value":"male"} [not carrying]{"entity":"is_with", "group":"hat_group", "value":"false"} a [beanie]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Can you identify a [woman]{"entity":"gender", "value":"female"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [fedora]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Is there someone [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [helmet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Do you see a [gentleman]{"entity":"gender", "value":"male"} [carrying]{"entity":"is_with", "group":"hat_group", "value":"true"} a [tam]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Have you noticed any [girls]{"entity":"gender", "value":"female"} [putting on]{"entity":"is_with", "group":"hat_group", "value":"true"} a [topper]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - Do you see a [man]{"entity":"gender", "value":"male"} [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [backpack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Can you locate a [woman]{"entity":"gender", "value":"female"} [not holding]{"entity":"is_with", "group":"bag_group", "value":"false"} a [satchel]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Is there a [boy]{"entity":"gender", "value":"male"} [having]{"entity":"is_with", "group":"bag_group", "value":"true"} a [knapsack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Have you noticed a [girl]{"entity":"gender", "value":"female"} [without]{"entity":"is_with", "group":"bag_group", "value":"false"} a [tote bag]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Do you notice a [gentleman]{"entity":"gender", "value":"male"} [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [luggage]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Have you seen a [lady]{"entity":"gender", "value":"female"} [not wearing]{"entity":"is_with", "group":"bag_group", "value":"false"} a [handbag]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Can you identify a [young woman]{"entity":"gender", "value":"female"} [holding]{"entity":"is_with", "group":"bag_group", "value":"true"} a [carryall]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Are there any individuals [not carrying]{"entity":"is_with", "group":"bag_group", "value":"false"} a [case]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Do you see a [lady]{"entity":"gender", "value":"female"} [with]{"entity":"is_with", "group":"bag_group", "value":"true"} a [pouch]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - Is there someone [having]{"entity":"is_with", "group":"bag_group", "value":"true"} a [rucksack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    - have you seen someone in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - do you see a [male]{"entity":"gender", "value":"male"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you see a [woman]{"entity":"gender", "value":"female"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - there is a [son]{"entity":"gender", "value":"male"} that stays in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you seen a [daughter]{"entity":"gender", "value":"female"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - do you see a [woman]{"entity":"gender", "value":"female"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - there is someone that stay in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you seen a [uncle]{"entity":"gender", "value":"male"} that stays in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - do you see someone in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you see a [dude]{"entity":"gender", "value":"male"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"} ?
+    - have you see a [lady]{"entity":"gender", "value":"female"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"} ?
+    - do you see a [guy]{"entity":"gender", "value":"male"} that stay in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - there is a [girl] that stays in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you seen a [woman]{"entity":"gender", "value":"female"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you notice a person in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you seen a [guy] in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - there is a [dude] in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - there is a [girl] in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - do you see a [men]{"entity":"gender", "value":"male"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - do you see a [women]{"entity":"gender", "value":"female"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - do you see a [men]{"entity":"gender", "value":"male"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - do you see a [women]{"entity":"gender", "value":"female"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - do you see a [girl]{"entity":"gender", "value":"female"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - do you see a [guy]{"entity":"gender", "value":"male"}  in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - is there a [girl]{"entity":"gender", "value":"female"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - there is a [dude]{"entity":"gender", "value":"male"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - is there a [girl]{"entity":"gender", "value":"female"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - there is a [dude]{"entity":"gender", "value":"male"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - there is [dude]{"entity":"gender", "value":"male"} that stay in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - there is [dude]{"entity":"gender", "value":"male"} that stay in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - there is [girl]{"entity":"gender", "value":"female"} that stay in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - there is [female friend]{"entity":"gender", "value":"female"} that stay in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you notice a [man]{"entity":"gender", "value":"male"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you notice a [man]{"entity":"gender", "value":"male"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you notice a [female friend]{"entity":"gender", "value":"female"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you notice a [stepmother]{"entity":"gender", "value":"female"} in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you notice a [guy]{"entity":"gender", "value":"male"} that stays in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you notice a [guy]{"entity":"gender", "value":"male"} that stays in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you notice a [girlfriend]{"entity":"gender", "value":"female"} that stays in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you notice a [stepmother]{"entity":"gender", "value":"female"} that stays in the [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - do you see a [girl]{"entity":"gender", "value":"female"} in the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - there is [girl]{"entity":"gender", "value":"female"} that stay in the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - have you seen a [guy] in the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you seen a [man] that stays in the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you notice a [guy]{"entity":"gender", "value":"male"} that stays in the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - there is someone that stay in the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you seen a person that pass the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} for four times
+    - there is someone that pass for the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} for 3 time 
+    - have you notice someone that pass for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 5 times
+    - do you see a person that pass for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 2 times
+    - have you see someone that pass for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 3 times
+    - have you notice that pass for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for five times
+    - there is someone that pass for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 2 times
+    - have you see a person passes for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 4 times 
+    - have you notice someone that pass for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 3 times
+    - have you see someone that pass for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 2 times
+    - have you see a person that pass for [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 4 times
+    - there is someone that pass for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 6 times
+    - there is someone that pass for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 3 times
+    - do you see a person that pass for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 3 times 
+    - do you see someone that pass for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 2 times
+    - have you notice someone that pass for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"} for 5 times 
+    - have you see someone that pass 4 times for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - have you seen a person that pass 6 times for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - there is someone that pass for 2 times for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - there is someone that pass for 3 times  for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - have you see someone that pass for 2 times for the [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - have you notice someone that pass for 4 times  for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - do you see someone that pass for 5 times for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - do you see a person that pass for 6 times for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - there is someone that pass for 3 times for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - there is a person that pass for five times for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - have you see a person that spent time for 3 times for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - have you see a person that pass for 4 times  for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - have you notice a person that pass for 2 times for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - have you notice a person that pass for 5 times  for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - do you see a person that pass 3 times for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - do you see someone that pass 2 times for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - i want to find someone that pass 4 times for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - i want to find someone that pass 3 times for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - i want to find a person that pass 7 times for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - i want to find a person that stay 8 times for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - i want to find someone that is stayed [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"} 5 times 
+    - i want to find someone that pass for the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"} 2 times
+    - i want to find a person that pass for [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"} 5 times 
+    - i want to find a person that pass for [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"} 9 times 
+    - i'm searching a person that pass for the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"} 4 times 
+    - i'm searching a person that pass for the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"} 9 times 
+    - i'm searching a person that pass 3 time  for the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - i'm searching a person that pass 6 times for [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - i am look for a [man]{"entity":"gender", "value":"male"}
+    - I'm trying to locate a [female]{"entity":"gender", "value":"female"} [using]{"entity":"is_with", "group":"bag_group", "value":"true"} a [sack]{"entity":"bag", "group":"bag_group", "value":"bag"}.
+    - I'm looking for a [female]{"entity":"gender", "value":"female"} [with]{"entity":"is_with", "group":"bag_group", "value":"true"} [rucksack]{"entity":"bag", "group":"bag_group", "value":"bag"}.
+    - I'm on quest to discover a [gal]{"entity":"gender", "value":"female"}.
+    - He is a [male]{"entity":"gender", "value":"male"}.
+    - She is a [female]{"entity":"gender", "value":"female"}.
+    - I want a person [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [beanie]{"entity":"hat", "group":"hat_group", "value":"hat"} and [with]{"entity":"is_with", "group":"bag_group", "value":"true"} [backpack]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - I want to find a [man]{"entity":"gender", "value":"male"}
+    - I'm looking for a [woman]{"entity":"gender", "value":"female"}
+    - I'm interested in find a [aunt]{"entity":"gender", "value":"female"}
+    - Can you find me a person [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [bonnet]{"entity":"hat", "group":"hat_group", "value":"hat"}?
+    - I want to find a person [using]{"entity":"is_with", "group":"bag_group", "value":"true"} a [bag]{"entity":"bag", "group":"bag_group"}.
+    - I search my [brother]{"entity":"gender", "value":"male"}
+    - I am searching my [sister]{"entity":"gender", "value":"female"}
+    - I am searching a person [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - Can you find a [nephew]{"entity":"gender", "value":"male"} [without]{"entity":"is_with", "group":"bag_group", "value":"false"}
+    - Do you know if a person [with]{"entity":"is_with", "group":"hat_group", "value":"true"} [hat]{"entity":"hat", "group":"hat_group"} is present?
+    - Do you know if a person [with]{"entity":"is_with", "group":"hat_group", "value":"true"} [head]{"entity":"hat", "group":"hat_group"} is present?
+    - I'm trying to find my [dad]{"entity":"gender", "value":"male"}. He [has]{"entity":"is_with", "group":"hat_group", "value":"true"} a [beret]{"entity":"hat", "group":"hat_group"}
+    - I'm trying to find my [son]{"entity":"gender", "value":"male"} [with]{"entity":"is_with", "group":"bag_group", "value":"true"} [knapsack]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - have you seen [mother-in-law]"entity":"gender", "value":"female"} [does not wear]{"entity":"is_with", "group":"bag_group", "value":"false"} a [satchel]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - i hope to find an individal who [not bring]{"entity":"is_with", "group":"bag_group", "value":"false"} a [knaspack]{"entity":"bag", "group":"bag_group", "value":"bag"} and [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"} in the shopping line_3
+    - i hope to find an individal [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"} and [not dress in]{"entity":"is_with", "group":"bag_group", "value":"false"} a [sack]{"entity":"bag", "group":"bag_group", "value":"bag"} line_3.
+    - i hope to find a human being who [takes]{"entity":"is_with", "group":"bag_group", "value":"true"} a [bag]{"entity":"bag", "group":"bag_group"} and [not]{"entity":"is_with", "group":"hat_group", "value":"false"} a [topper]{"entity":"hat", "group":"hat_group", "value":"hat"} in the shopping line_3
+    - i m look for a person who is [not carrying]{"entity":"is_with", "group":"bag_group", "value":"false"} a [purse]{"entity":"bag", "group":"bag_group", "value":"bag"} and [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"} in the shopping center
+    - i m look for a one who is [does not have]{"entity":"is_with", "group":"hat_group", "value":"false"} a [sombrero]{"entity":"hat", "group":"hat_group", "value":"hat"} and [taking]{"entity":"is_with", "group":"bag_group", "value":"true"} a [purse]{"entity":"bag", "group":"bag_group", "value":"bag"} in the shopping center
+    - can you find someone that [was not in]{"entity":"is_with", "group":"trajectory_group", "value":"false"} the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - i'm searching for a person that [didn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - i'm trying to locate someone that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - have you notice someone that [not frequented]{"entity":"is_with", "group":"trajectory_group", "value":"false"} the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - there is someone that [does pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - have you see someone that [doesn't spend time in]{"entity":"is_with", "group":"trajectory_group", "value":"false"} the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - can you find a [girl]{"entity":"gender", "value":"female"} that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - i'm searching for a [guy]{"entity":"gender", "value":"male"} that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - i'm trying to locate a person that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - have you notice a person that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - there is a [girl]{"entity":"gender", "value":"female"} that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - have you see a [guy]{"entity":"gender", "value":"male"} that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - can you find someone that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - i'm searching for a person that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - i'm trying to locate someone that [was not at]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - have you notice someone that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - there is someone that [does not pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - have you see someone that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - can you find a [stepsister]{"entity":"gender", "value":"female"} that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - i'm searching for a [guy]{"entity":"gender", "value":"male"} that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - i'm trying to locate a person that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - have you notice a person that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - there is a [stepsister]{"entity":"gender", "value":"female"} that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - have you see a [guy]{"entity":"gender", "value":"male"} that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - have you see someone that [not passed in]{"entity":"is_with", "group":"trajectory_group", "value":"false"} 15 times for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - have you notice someone [not at]{"entity":"is_with", "group":"trajectory_group", "value":"false"} 5 times for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - can you find a person that [has not been]{"entity":"is_with", "group":"trajectory_group", "value":"false"} 4 times for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - i'm searching a person [not at the]{"entity":"is_with", "group":"trajectory_group", "value":"false"} 6 times for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}
+    - have you see someone [not in]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"} 12 times
+    - have you notice someone that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"} 3 times
+    - can you find a person that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"} 6 times
+    - i'm searching a person that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"} 2 times
+    - have you see someone that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} 1 time for the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"}
+    - have you notice someone that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} 5 times  for the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"}
+    - can you find a person that [not stay in]{"entity":"is_with", "group":"trajectory_group", "value":"false"} 11 times for the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"}
+    - i'm searching a person that [didn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} 3 times for the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"}
+    - have you see someone that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"} 14 times
+    - have you notice someone that [does not pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"} 7 times
+    - can you find a person that [not stay in]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"} 4 times 
+    - i'm searching a person that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"} 4 times 
+    - i am look for a individual [don't stay in]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"}
+    - can you find someone that pass for the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"} and [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"}
+    - i'm looking for a person that stay in the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"} and [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"}
+    - have you see a person that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"}  for the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"} and stay in the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"}
+    - there is a person that [not pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} or the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"} and stay in the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"}
+    - i want to find a person that stay in the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"} and in the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"}
+    - i want to find a person that stay in the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"} but [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} pass for the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"}
+    - i'm searching for a person that [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} stay in the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"} but pass for the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"}
+    - have you notice someone that pass for the [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"} and near the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - a person that pass near the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} and [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you notice someone near the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} but that [doesn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - can you find a person that [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} pass for the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} and stay near the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you notice a [stepbrother]{"entity":"gender", "value":"male"} that [didn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} for the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} but pass for the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - can you find a [grandmother]{"entity":"gender", "value":"female"} that [did not stay]{"entity":"is_with", "group":"trajectory_group", "value":"false"} in the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} but stay in the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}
+    - have you see a [boy] that stays in the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"} but [didn't pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} near the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - there is a [grandmother]{"entity":"gender", "value":"female"} that [did not pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} near the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"} but stay near the [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}
+    - Can you find someone who was near the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} but [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} inside it?
+    - Is there a person who stayed close to the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} and [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} visited it?
+    - Who was [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} seen inside the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} but remained nearby?
+    - Was anyone spotted near the [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"} but [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} inside it?
+    - Can you check if someone [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} passed through [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"} but stayed close to it?
+    - Did anyone [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} go into the [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"} and linger around it?
+    - Is there someone who stayed near the [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"} and [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} visited it?
+    - Who [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} entered the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"} but stayed in its vicinity?
+    - Can you find someone that [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} walked into the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"} but remained nearby?
+    - Is there a person who [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} entered the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} but stayed close to it?
+    - Did anyone stay near the [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"} while [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} visiting it?
+    - Who was close to the [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"} but [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} spotted inside it?
+    - Find someone who [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} entered the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"} but lingered near it.
+    - Did anyone [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} visit the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} but remained close to it?
+    - Can you check for someone who was near the [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"} but [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} went inside?
+    - Was anyone around the [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"} while [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} entering it?
+    - Is there someone who [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} passed through the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"} but stayed close?
+    - Did anyone [avoid]{"entity":"is_with", "group":"trajectory_group", "value":"true"}  entering the [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"} and stay nearby?
+    - Look for someone that [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} avoided entering the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"} but stayed in the area.
+    - Can you locate a person who stayed near the [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"} but [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} passed through it?
+    - Did anyone linger close to the [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"} while [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} visiting it?
+    - Who was near the [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"} but [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} inside it?
+    - Can you identify someone that [not]{"entity":"is_with", "group":"trajectory_group", "value":"false"} visited the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"} but remained in its surroundings?
+    - Look for someone [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [two times]{"entity":"number", "group":"trajectory_group", "value":"2"} the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"} 
+    - Look for someone [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [two times]{"entity":"number", "group":"trajectory_group", "value":"2"} the [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+    - Find a person [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [one time]{"entity":"number", "group":"trajectory_group", "value":"1"} on [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}
+    - Search for an individual [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [three times]{"entity":"number", "group":"trajectory_group", "value":"3"} on the [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Can you find someone [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [two times]{"entity":"number", "group":"trajectory_group", "value":"2"} near [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - Locate a person [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [four times]{"entity":"number", "group":"trajectory_group", "value":"4"} along [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}
+    - Show me someone who [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [one time]{"entity":"number", "group":"trajectory_group", "value":"1"} the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - Identify a person [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [three times]{"entity":"number", "group":"trajectory_group", "value":"3"} the [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Please check for someone [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [two times]{"entity":"number", "group":"trajectory_group", "value":"2"} on the [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+    - Try finding an individual [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [one time]{"entity":"number", "group":"trajectory_group", "value":"1"} on [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Could you locate someone [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [four times]{"entity":"number", "group":"trajectory_group", "value":"4"} along the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - Look for someone [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [five times]{"entity":"number", "group":"trajectory_group", "value":"5"} the [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+    - Find a person [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [six time]{"entity":"number", "group":"trajectory_group", "value":"6"} on [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}
+    - Search for an individual [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [three times]{"entity":"number", "group":"trajectory_group", "value":"3"} on the [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Can you find someone [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [two times]{"entity":"number", "group":"trajectory_group", "value":"2"} near [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - Locate a person [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [seven times]{"entity":"number", "group":"trajectory_group", "value":"7"} along [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}
+    - Show me someone who [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [one time]{"entity":"number", "group":"trajectory_group", "value":"1"} the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - Identify a person [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [three times]{"entity":"number", "group":"trajectory_group", "value":"3"} the [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Please check for someone [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [two times]{"entity":"number", "group":"trajectory_group", "value":"2"} on the [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+    - Try finding an individual [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [one time]{"entity":"number", "group":"trajectory_group", "value":"1"} on [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Could you locate someone [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [four times]{"entity":"number", "group":"trajectory_group", "value":"4"} along the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - Look for someone [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [more than]{"entity":"condition", "group":"trajectory_group", "value":"more"} [two times]{"entity":"number", "group":"trajectory_group", "value":"2"} the [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+    - Find a person [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [less than]{"entity":"condition", "group":"trajectory_group", "value":"less"} [one time]{"entity":"number", "group":"trajectory_group", "value":"1"} on [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}
+    - Search for an individual [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [three times]{"entity":"number", "group":"trajectory_group", "value":"3"} on the [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Can you find someone [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [more]{"entity":"condition", "group":"trajectory_group", "value":"more"} [two times]{"entity":"number", "group":"trajectory_group", "value":"2"} near [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - Locate a person [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [four times]{"entity":"number", "group":"trajectory_group", "value":"4"} along [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}
+    - Show me someone who [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [one time]{"entity":"number", "group":"trajectory_group", "value":"1"} the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - Identify a person [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [less]{"entity":"condition", "group":"trajectory_group", "value":"less"} [three times]{"entity":"number", "group":"trajectory_group", "value":"3"} the [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Please check for someone [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [exactly]{"entity":"condition", "group":"trajectory_group", "value":"exactly"} [two times]{"entity":"number", "group":"trajectory_group", "value":"2"} on the [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+    - Try finding an individual [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [one time]{"entity":"number", "group":"trajectory_group", "value":"1"} on [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Could you locate someone [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [exactly]{"entity":"condition", "group":"trajectory_group", "value":"exactly"} [four times]{"entity":"number", "group":"trajectory_group", "value":"4"} along the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - Do you see a [male]{"entity":"gender", "value":"male"} in [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}?
+    - Is there a [female]{"entity":"gender", "value":"female"} on line 2?
+    - Can you find a [dude]{"entity":"gender", "value":"male"} with a bag?
+    - Is there a [girl]{"entity":"gender", "value":"female"} wearing a hat?
+    - Are there any [guys]{"entity":"gender", "value":"male"} near line 4?
+    - Can you check if a [woman]{"entity":"gender", "value":"female"} crossed [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}?
+    - I am looking for a [man]{"entity":"gender", "value":"male"} who crossed [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}.
+    - Do you have any [lady]{"entity":"gender", "value":"female"} in [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}?
+    - Is there a [gentleman]{"entity":"gender", "value":"male"} near [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}?
+    - Did a [boy]{"entity":"gender", "value":"male"} pass by [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}?
+    - Do you see a [gal]{"entity":"gender", "value":"female"} with a hat on [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}?
+    - Are there any [sisters]{"entity":"gender", "value":"female"} near the bag area?
+    - Is there a [brother]{"entity":"gender", "value":"male"} who crossed [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}?
+    - Did a [niece]{"entity":"gender", "value":"female"} walk near [line three]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}?
+    - Can you find a [son]{"entity":"gender", "value":"male"} crossing [line one]{"entity":"trajectory", "group":"trajectory_group", "value":"1"} and [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}?
+    - Did a [daughter]{"entity":"gender", "value":"female"} cross [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"} and [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}?
+    - Is there a [father]{"entity":"gender", "value":"male"} crossing all [line one]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}, [line two]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}, and [line three]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}?
+    - Did any [mother]{"entity":"gender", "value":"female"} cross [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"} and [line one]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}?
+    - Can you find a [child]{"entity":"gender", "value":"male"} who walked near [line two]{"entity":"trajectory", "group":"trajectory_group", "value":"2"} and [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}?
+    - Is there a [person]{"entity":"gender", "value":"unknown"} who crossed [line one]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}, [line three]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}, and [line four]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}?
+    - Did a [teenager]{"entity":"gender", "value":"male"} cross [line one]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}, [line two]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}, and [line three]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}?
+    - Is there a [grandmother]{"entity":"gender", "value":"female"} near [line four]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}?
+    - Can you check for a [grandfather]{"entity":"gender", "value":"male"} near [line one]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}?
+
+- intent: ask_id
+  examples: |
+    - Can you tell me something about [ID 1]{"entity":"id", "value":"1"}?
+    - I'd like to know more about [ID 2]{"entity":"id", "value":"2"}.
+    - What can you tell me about [ID 3]{"entity":"id", "value":"3"}?
+    - Do you have details about [ID 4]{"entity":"id", "value":"4"}?
+    - I need information regarding [ID 5]{"entity":"id", "value":"5"}.
+    - Who is linked to [ID 6]{"entity":"id", "value":"6"}?
+    - Can you share info about [ID 7]{"entity":"id", "value":"7"}?
+    - Do you know anything about [ID 8]{"entity":"id", "value":"8"}?
+    - Please provide details about [ID 9]{"entity":"id", "value":"9"}.
+    - What do you have on [ID 10]{"entity":"id", "value":"10"}?
+    - Is there any information about [ID 11]{"entity":"id", "value":"11"}?
+    - Could you tell me more about [ID 12]{"entity":"id", "value":"12"}?
+    - What’s the story behind [ID 13]{"entity":"id", "value":"13"}?
+    - I'd like to hear about [ID 14]{"entity":"id", "value":"14"}.
+    - Any details on [ID 15]{"entity":"id", "value":"15"}?
+    - What can you find about [ID 16]{"entity":"id", "value":"16"}?
+    - Tell me more about [ID 17]{"entity":"id", "value":"17"}.
+    - Can you explain who [ID 18]{"entity":"id", "value":"18"} is?
+    - Do you have any insights about [ID 19]{"entity":"id", "value":"19"}?
+    - Provide me some information about [ID 20]{"entity":"id", "value":"20"}.   
+    - I'd like to know more about [ID 21]{"entity":"id", "value":"21"}.
+    - Could you tell me more about [ID 22]{"entity":"id", "value":"22"}?
+    - Can you tell me something about [ID1]{"entity":"id", "value":"1"}?
+    - I'd like to know more about [ID2]{"entity":"id", "value":"2"}.
+    - What can you tell me about [ID3]{"entity":"id", "value":"3"}?
+    - Do you have details about [ID4]{"entity":"id", "value":"4"}?
+    - I need information regarding [ID5]{"entity":"id", "value":"5"}.
+    - Who is linked to [ID6]{"entity":"id", "value":"6"}?
+    - Can you share info about [ID7]{"entity":"id", "value":"7"}?
+    - Do you know anything about [ID8]{"entity":"id", "value":"8"}?
+    - Please provide details about [ID9]{"entity":"id", "value":"9"}.
+    - What do you have on [ID10]{"entity":"id", "value":"10"}?
+    - Is there any information about [ID11]{"entity":"id", "value":"11"}?
+    - Could you tell me more about [ID12]{"entity":"id", "value":"12"}?
+    - What’s the story behind [ID13]{"entity":"id", "value":"13"}?
+    - I'd like to hear about [ID14]{"entity":"id", "value":"14"}.
+    - Any details on [ID15]{"entity":"id", "value":"15"}?
+    - What can you find about [ID16]{"entity":"id", "value":"16"}?
+    - Tell me more about [ID17]{"entity":"id", "value":"17"}.
+    - Can you explain who [ID18]{"entity":"id", "value":"18"} is?
+    - Do you have any insights about [ID19]{"entity":"id", "value":"19"}?
+    - Provide me some information about [ID20]{"entity":"id", "value":"20"}.   
+    - I'd like to know more about [ID21]{"entity":"id", "value":"21"}.
+    - Could you tell me more about [ID22]{"entity":"id", "value":"22"}?
+    - Can you tell me something about [I'd 1]{"entity":"id", "value":"1"}?
+    - I'd like to know more about [I'd 2]{"entity":"id", "value":"2"}.
+    - What can you tell me about [I'd 3]{"entity":"id", "value":"3"}?
+    - Do you have details about [I'd 4]{"entity":"id", "value":"4"}?
+    - I need information regarding [I'd 5]{"entity":"id", "value":"5"}.
+    - Who is linked to [I'd 6]{"entity":"id", "value":"6"}?
+    - Can you share info about [I'd 7]{"entity":"id", "value":"7"}?
+    - Do you know anything about [I'd 8]{"entity":"id", "value":"8"}?
+    - Please provide details about [I'd 9]{"entity":"id", "value":"9"}.
+    - What do you have on [I'd 10]{"entity":"id", "value":"10"}?
+    - Is there any information about [I'd 11]{"entity":"id", "value":"11"}?
+    - Could you tell me more about [I'd 12]{"entity":"id", "value":"12"}?
+    - What’s the story behind [I'd 13]{"entity":"id", "value":"13"}?
+    - I'd like to hear about [I'd 14]{"entity":"id", "value":"14"}.
+    - Any details on [I'd 15]{"entity":"id", "value":"15"}?
+    - What can you find about [I'd 16]{"entity":"id", "value":"16"}?
+    - Tell me more about [I'd 17]{"entity":"id", "value":"17"}.
+    - Can you explain who [I'd 18]{"entity":"id", "value":"18"} is?
+    - Do you have any insights about [I'd 19]{"entity":"id", "value":"19"}?
+    - Provide me some information about [I'd 20]{"entity":"id", "value":"20"}.
+    - I'd like to know more about [I'd 21]{"entity":"id", "value":"21"}.
+    - Could you tell me more about [I'd 22]{"entity":"id", "value":"22"}?
+    - Can you tell me something about [Ai'd 1]{"entity":"id", "value":"1"}?
+    - I'd like to know more about [Ai'd 2]{"entity":"id", "value":"2"}.
+    - What can you tell me about [Ai'd 3]{"entity":"id", "value":"3"}?
+    - Do you have details about [Ai'd 4]{"entity":"id", "value":"4"}?
+    - I need information regarding [Ai'd 5]{"entity":"id", "value":"5"}.
+    - Who is linked to [Ai'd 6]{"entity":"id", "value":"6"}?
+    - Can you share info about [Ai'd 7]{"entity":"id", "value":"7"}?
+    - Do you know anything about [Ai'd 8]{"entity":"id", "value":"8"}?
+    - Please provide details about [Ai'd 9]{"entity":"id", "value":"9"}.
+    - What do you have on [Ai'd 10]{"entity":"id", "value":"10"}?
+    - Is there any information about [Ai'd 11]{"entity":"id", "value":"11"}?
+    - Could you tell me more about [Ai'd 12]{"entity":"id", "value":"12"}?
+    - What’s the story behind [Ai'd 13]{"entity":"id", "value":"13"}?
+    - I'd like to hear about [Ai'd 14]{"entity":"id", "value":"14"}.
+    - Any details on [Ai'd 15]{"entity":"id", "value":"15"}?
+    - What can you find about [Ai'd 16]{"entity":"id", "value":"16"}?
+    - Tell me more about [Ai'd 17]{"entity":"id", "value":"17"}.
+    - Can you explain who [Ai'd 18]{"entity":"id", "value":"18"} is?
+    - Do you have any insights about [Ai'd 19]{"entity":"id", "value":"19"}?
+    - Provide me some information about [Ai'd 20]{"entity":"id", "value":"20"}.
+    - I'd like to know more about [Ai'd 21]{"entity":"id", "value":"21"}.
+    - Could you tell me more about [Ai'd 22]{"entity":"id", "value":"22"}?
+    
+
+- intent: ask_specific
+  examples: |
+    - Does [ID 1]{"entity":"id", "value":"1"} [have]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID 2]{"entity":"id", "value":"2"} [carrying]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID 3]{"entity":"id", "value":"3"} [without]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [ID 4]{"entity":"id", "value":"4"} [wear]{"entity": "is_with", "group": "hat_group", "value": "true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID 5]{"entity":"id", "value":"5"} [not wearing]{"entity": "is_with", "group": "hat_group", "value": "false"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID 6]{"entity":"id", "value":"6"} [holding]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [ID 7]{"entity":"id", "value":"7"} [not have]{"entity": "is_with", "group": "hat_group", "value": "false"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID 8]{"entity":"id", "value":"8"} [carrying]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID 9]{"entity":"id", "value":"9"} [without]{"entity": "is_with", "group": "hat_group", "value": "false"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID 10]{"entity":"id", "value":"10"} [not carrying]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [ID 11]{"entity":"id", "value":"11"} [have]{"entity": "is_with", "group": "hat_group", "value": "true"} any [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID 12]{"entity":"id", "value":"12"} [wearing]{"entity": "is_with", "group": "hat_group", "value": "true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Does [ID 13]{"entity":"id", "value":"13"} [not holding]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID 14]{"entity":"id", "value":"14"} [not wearing]{"entity": "is_with", "group": "hat_group", "value": "false"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID 15]{"entity":"id", "value":"15"} [without]{"entity": "is_with", "group": "bag_group", "value": "false"} any [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID 16]{"entity":"id", "value":"16"} a [girl]{"entity":"gender", "value":"female"} [carrying]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [ID 17]{"entity":"id", "value":"17"} [wear]{"entity": "is_with", "group": "hat_group", "value": "true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID 18]{"entity":"id", "value":"18"} [without]{"entity": "is_with", "group": "hat_group", "value": "false"} any [hat]{"entity":"hat", "group":"hat_group"}?
+    - Does [ID 19]{"entity":"id", "value":"19"} [not carrying]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID 20]{"entity":"id", "value":"20"} [holding]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [ID 21]{"entity":"id", "value":"21"} [not have]{"entity": "is_with", "group": "hat_group", "value": "false"} any [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID 22]{"entity":"id", "value":"22"} a [man]{"entity":"gender", "value":"male"} [carrying]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID 23]{"entity":"id", "value":"23"} a [girl]{"entity":"gender", "value":"female"} [wearing]{"entity": "is_with", "group": "hat_group", "value": "true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Does [ID 24]{"entity":"id", "value":"24"} [not holding]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID 25]{"entity":"id", "value":"25"} [not wearing]{"entity": "is_with", "group": "hat_group", "value": "false"} any [hat]{"entity":"hat", "group":"hat_group"}?
+    - Does [ID1]{"entity":"id", "value":"1"} [have]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID2]{"entity":"id", "value":"2"} [carrying]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID3]{"entity":"id", "value":"3"} [without]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [ID4]{"entity":"id", "value":"4"} [wear]{"entity": "is_with", "group": "hat_group", "value": "true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID5]{"entity":"id", "value":"5"} [not wearing]{"entity": "is_with", "group": "hat_group", "value": "false"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID6]{"entity":"id", "value":"6"} [holding]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [ID7]{"entity":"id", "value":"7"} [not have]{"entity": "is_with", "group": "hat_group", "value": "false"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID8]{"entity":"id", "value":"8"} [carrying]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID9]{"entity":"id", "value":"9"} [without]{"entity": "is_with", "group": "hat_group", "value": "false"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID10]{"entity":"id", "value":"10"} [not carrying]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [ID11]{"entity":"id", "value":"11"} [have]{"entity": "is_with", "group": "hat_group", "value": "true"} any [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID12]{"entity":"id", "value":"12"} [wearing]{"entity": "is_with", "group": "hat_group", "value": "true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Does [ID13]{"entity":"id", "value":"13"} [not holding]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID14]{"entity":"id", "value":"14"} [not wearing]{"entity": "is_with", "group": "hat_group", "value": "false"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID15]{"entity":"id", "value":"15"} [without]{"entity": "is_with", "group": "bag_group", "value": "false"} any [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID16]{"entity":"id", "value":"16"} a [girl]{"entity":"gender", "value":"female"} [carrying]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [ID17]{"entity":"id", "value":"17"} [wear]{"entity": "is_with", "group": "hat_group", "value": "true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID18]{"entity":"id", "value":"18"} [without]{"entity": "is_with", "group": "hat_group", "value": "false"} any [hat]{"entity":"hat", "group":"hat_group"}?
+    - Does [ID19]{"entity":"id", "value":"19"} [not carrying]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID20]{"entity":"id", "value":"20"} [holding]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [ID21]{"entity":"id", "value":"21"} [not have]{"entity": "is_with", "group": "hat_group", "value": "false"} any [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [ID22]{"entity":"id", "value":"22"} a [man]{"entity":"gender", "value":"male"} [carrying]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID23]{"entity":"id", "value":"23"} a [girl]{"entity":"gender", "value":"female"} [wearing]{"entity": "is_with", "group": "hat_group", "value": "true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Does [ID24]{"entity":"id", "value":"24"} [not holding]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [ID25]{"entity":"id", "value":"25"} [not wearing]{"entity": "is_with", "group": "hat_group", "value": "false"} any [hat]{"entity":"hat", "group":"hat_group"}?
+    - Does [I'd 1]{"entity":"id", "value":"1"} [have]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [I'd 2]{"entity":"id", "value":"2"} [carrying]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [I'd 3]{"entity":"id", "value":"3"} [without]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [I'd 4]{"entity":"id", "value":"4"} [wear]{"entity": "is_with", "group": "hat_group", "value": "true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [I'd 5]{"entity":"id", "value":"5"} [not wearing]{"entity": "is_with", "group": "hat_group", "value": "false"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [I'd 6]{"entity":"id", "value":"6"} [holding]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [I'd 7]{"entity":"id", "value":"7"} [not have]{"entity": "is_with", "group": "hat_group", "value": "false"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [I'd 8]{"entity":"id", "value":"8"} [carrying]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [I'd 9]{"entity":"id", "value":"9"} [without]{"entity": "is_with", "group": "hat_group", "value": "false"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [I'd 10]{"entity":"id", "value":"10"} [not carrying]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [I'd 11]{"entity":"id", "value":"11"} [have]{"entity": "is_with", "group": "hat_group", "value": "true"} any [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [I'd 12]{"entity":"id", "value":"12"} [wearing]{"entity": "is_with", "group": "hat_group", "value": "true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Does [I'd 13]{"entity":"id", "value":"13"} [not holding]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [I'd 14]{"entity":"id", "value":"14"} [not wearing]{"entity": "is_with", "group": "hat_group", "value": "false"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [I'd 15]{"entity":"id", "value":"15"} [without]{"entity": "is_with", "group": "bag_group", "value": "false"} any [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [I'd 16]{"entity":"id", "value":"16"} a [girl]{"entity":"gender", "value":"female"} [carrying]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [I'd 17]{"entity":"id", "value":"17"} [wear]{"entity": "is_with", "group": "hat_group", "value": "true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [I'd 18]{"entity":"id", "value":"18"} [without]{"entity": "is_with", "group": "hat_group", "value": "false"} any [hat]{"entity":"hat", "group":"hat_group"}?
+    - Does [I'd 19]{"entity":"id", "value":"19"} [not carrying]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [I'd 20]{"entity":"id", "value":"20"} [holding]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Does [I'd 21]{"entity":"id", "value":"21"} [not have]{"entity": "is_with", "group": "hat_group", "value": "false"} any [hat]{"entity":"hat", "group":"hat_group"}?
+    - Is [I'd 22]{"entity":"id", "value":"22"} a [man]{"entity":"gender", "value":"male"} [carrying]{"entity": "is_with", "group": "bag_group", "value": "true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [I'd 23]{"entity":"id", "value":"23"} a [girl]{"entity":"gender", "value":"female"} [wearing]{"entity": "is_with", "group": "hat_group", "value": "true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Does [I'd 24]{"entity":"id", "value":"24"} [not holding]{"entity": "is_with", "group": "bag_group", "value": "false"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - Is [I'd 25]{"entity":"id", "value":"25"} [not wearing]{"entity": "is_with", "group": "hat_group", "value": "false"} any [hat]{"entity":"hat", "group":"hat_group"}?
+    - Has [ID1]{"entity":"id", "value":"1"} [crossed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - Did [ID 2]{"entity":"id", "value":"2"} [pass over]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - Has [I'd 3]{"entity":"id", "value":"3"} [not crossed]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}?
+    - Did [ID4]{"entity":"id", "value":"4"} [not pass]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"}?
+    - Did [ID 5]{"entity":"id", "value":"5"} [go over]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}?
+    - Has [I'd 6]{"entity":"id", "value":"6"} [not moved past]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}?
+    - Has [ID7]{"entity":"id", "value":"7"} [stepped over]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"}?
+    - Did [ID 8]{"entity":"id", "value":"8"} [not move across]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"}?
+    - Has [I'd 9]{"entity":"id", "value":"9"} [crossed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - Did [ID10]{"entity":"id", "value":"10"} [not step over]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - Has [ID 11]{"entity":"id", "value":"11"} [gone past]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}?
+    - Did [I'd 12]{"entity":"id", "value":"12"} [not move over]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"}?
+    - Has [ID13]{"entity":"id", "value":"13"} [passed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}?
+    - Did [ID 14]{"entity":"id", "value":"14"} [not cross]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}?
+    - Has [I'd 15]{"entity":"id", "value":"15"} [stepped past]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"}?
+    - Did [ID16]{"entity":"id", "value":"16"} [not go across]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"}?
+    - Has [ID 17]{"entity":"id", "value":"17"} [moved past]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - Did [I'd 18]{"entity":"id", "value":"18"} [not cross]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line one]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+    - Has [ID19]{"entity":"id", "value":"19"} [gone over]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 2]{"entity":"trajectory","group":"trajectory_group", "value":"2"}?
+    - Did [ID 20]{"entity":"id", "value":"20"} [not step past]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line two]{"entity":"trajectory","group":"trajectory_group", "value":"2"}?
+    - Has [I'd 21]{"entity":"id", "value":"21"} [walked over]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 3]{"entity":"trajectory","group":"trajectory_group", "value":"3"}?
+    - Did [ID22]{"entity":"id", "value":"22"} [not pass over]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line three]{"entity":"trajectory","group":"trajectory_group", "value":"3"}?
+    - Has [ID 23]{"entity":"id", "value":"23"} [crossed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 4]{"entity":"trajectory","group":"trajectory_group", "value":"4"}?
+    - Did [I'd 24]{"entity":"id", "value":"24"} [not move across]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line four]{"entity":"trajectory","group":"trajectory_group", "value":"4"}?
+    - Has [ID25]{"entity":"id", "value":"25"} [stepped over]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 1]{"entity":"trajectory","group":"trajectory_group", "value":"1"}?
+
+
+
+- intent: ask_with_no_info
+  examples: |
+    - I'm looking for a person
+    - I am looking for a person
+    - I'm searching for a person
+    - I'm in search of an individual
+    - I'm trying to find someone
+    - I'm on the hunt for a person
+    - I'm seeking out a specific individual
+    - I'm in need of locating a person
+    - I'm on a quest to find someone
+    - I'm searching for a particular person
+    - I'm in the process of locating an individual
+    - I'm in pursuit of a person
+    - I'm actively seeking someone
+    - I'm attempting to locate someone
+    - I need help finding a person
+    - I need to locate someone
+    - I'm looking for someone
+    - I'm looking to find a person
+    - I'm trying to identify someone
+    - I need assistance in locating a person
+    - I'm inquiring about a specific individual
+    - I'm attempting to find a person
+    - I'm interested in finding someone
+    - I want to find a person
+    - Can you help me find someone?
+    - Could you assist me in locating a person?
+    - Is it possible to find a specific individual?
+    - I'm wondering if you can locate someone
+    - I’d like to track down a person
+    - I’d like to search for someone
+    - I'm hoping to find a person
+    - Do you know if it's possible to find someone?
+    - I'm curious about finding a person
+    - Can you guide me to find someone?
+    - I'm attempting to search for a person
+    - Could you help me locate someone?
+    - I'm in need of help to find a person
+    - I'd like to learn how to find a person
+    - Is there a way to locate someone?
+    - How can I find a specific individual?
+    - I'm looking for someone but I have no details
+    - I'm searching for a person, but I don't know their details
+    - I don't have any info, but I want to find someone
+    - Can you help me find a person with no details?
+    - I need to find someone, but I don't have information
+    - I'm asking if you can locate someone without info
+    - I'm looking for someone, but I don't know much about them
+    - I'm interested in finding someone, but I have no specifics
+    - I'm looking for help in finding someone
+    - I need guidance to locate a person
+
+- intent: explain
+  examples: |
+    - Why do you need to know that?
+    - What's the reason behind wanting that information?
+    - Could you share the purpose behind your inquiry?
+    - Is there a specific motivation for asking that?
+    - What leads you to inquire about that?
+    - Why do you want to know this info?
+    - Can you provide some context for needing that information?
+    - Is there a particular intention behind your question?
+    - What prompts your interest in that detail?
+    - Is there a specific goal you're trying to achieve by asking that?
+    - Can you shed light on the context for wanting to know?
+    - What’s the purpose of asking this?
+    - Why is that information important to you?
+    - What do you need that information for?
+    - Can you explain why you’re asking this?
+    - What’s the objective behind your question?
+    - Is there a reason why you need this info?
+    - Can you clarify why this is relevant to you?
+    - Why is this detail important to you?
+    - Could you elaborate on why you want to know this?
+    - Can you tell me why this is necessary?
+    - What's your reasoning for wanting that information?
+    - Why do you feel this is important to ask?
+    - Could you provide insight into why you’re curious about that?
+    - Can you specify the purpose of your request?
+    - What’s driving your interest in this detail?
+    - Could you help me understand why this is needed?
+    - Is there a reason you’re asking for this info?
+    - Can you share why this matters to you?
+    - Why are you seeking this information?
+    - Could you clarify the purpose behind your question?
+    - Is there a reason you’re inquiring about this?
+    - What makes you want to know about this?
+    - Could you explain why this is of interest to you?
+    - What motivates you to ask this question?
+    - Can you help me understand your intent for asking this?
+    - Why is this question relevant to you?
+    - Can you elaborate on the purpose of this inquiry?
+    - What’s the intent behind your question?
+    - Is there a particular reason you’re asking about this?
+    - Can you tell me why you’re interested in that?
+    - Could you explain the significance of this information to you?
+    - What’s your reason for asking this question?
+    - Why is this detail necessary for you?
+    - Could you provide more context for your question?
+    - What’s the background behind wanting to know this?
+    - Can you clarify why this information is required?
+    - Why do you find this information important?
+    - Can you give more insight into your reason for asking this?
+
+# user provides information about the gender
+# user provides information about the gender
+- intent: inform_info
+  examples: |
+    - a [boy]{"entity":"gender", "value":"male"}
+    - [sister]{"entity":"gender", "value":"female"}
+    - an [old man]{"entity":"gender", "value":"male"}
+    - It should be a [mom]{"entity":"gender", "value":"female"}
+    - Pretty sure it is a [man]{"entity":"gender", "value":"male"}
+    - Almost sure it is a [niece]{"entity":"gender", "value":"female"}
+    - [wife]{"entity":"gender", "value":"female"}
+    - [dude]{"entity":"gender", "value":"male"}
+    - [son]{"entity":"gender", "value":"male"}, I think
+    - a [male]{"entity":"gender", "value":"male"}
+    - Should be a [male]{"entity":"gender", "value":"male"}
+    - a [man]{"entity":"gender", "value":"male"}
+    - a [woman]{"entity":"gender", "value":"female"}
+    - [female]{"entity":"gender", "value":"female"}
+    - [he]{"entity":"gender", "value":"male"}
+    - [she]{"entity":"gender", "value":"female"}
+    - he is a [male]{"entity":"gender", "value":"male"}
+    - she is a [female]{"entity":"gender", "value":"female"}
+    - the [gentleman]{"entity":"gender", "value":"male"}
+    - the [lady]{"entity":"gender", "value":"female"}
+    - a [guy]{"entity":"gender", "value":"male"}
+    - a [gal]{"entity":"gender", "value":"female"}
+
+# DA MODIFICARE
+- intent: count_people
+  examples: |
+    - everyone with [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [head]{"entity":"hat", "group":"hat_group"}?
+    - count everybody [have]{"entity":"is_with", "group":"bag_group", "value":"true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+    - count the [boys]{"entity":"gender", "value":"male"} [with]{"entity":"is_with", "group":"hat_group", "value":"true"}  a [hat]{"entity":"hat", "group":"hat_group"}
+    - count the [old men]{"entity":"gender", "value":"male"} [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [hat]{"entity":"hat", "group":"hat_group"}
+    - count the people [without]{"entity":"is_with", "group":"bag_group", "value":"false"}  a [bag]{"entity":"bag", "group":"bag_group"}
+    - count the people [without]{"entity":"is_with", "group":"hat_group", "value":"false"} [hat]{"entity":"hat", "group":"hat_group"}
+    - how many people are [male]{"entity":"gender", "value":"male"} and [with]{"entity":"is_with", "group":"bag_group", "value":"true"} [rucksack]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - know the quantity of people [no]{"entity":"is_with", "group":"hat_group", "value":"false"} [cap]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - count people [with no]{"entity":"is_with", "group":"hat_group", "value":"false"} [fedora]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - count everyone [without]{"entity":"is_with", "group":"bag_group", "value":"false"} a [purse]{"entity":"hat", "group":"bag_group", "value":"bag"}
+    - Determine how many people [not puts on]{"entity":"is_with", "group":"bag_group", "value":"false"} a [bag]{"entity":"bag", "group":"bag_group"} and [have]{"entity":"is_with", "group":"hat_group", "value":"true"} [sombrero]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - Enumerate individuals [doesn't wear]{"entity":"is_with", "group":"hat_group", "value":"false"} a [bonnet]{"entity":"hat", "group":"hat_group", "value":"hat"} and [does not wear]{"entity":"is_with", "group":"bag_group", "value":"false"} a [sack]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - assess the number of individuals [haven't]{"entity":"is_with", "group":"bag_group", "value":"false"} a [bag]{"entity":"bag", "group":"bag_group"} and [don't wear]{"entity":"is_with", "group":"hat_group", "value":"false"} [fedora]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - Determine the number of people [have]{"entity":"is_with", "group":"hat_group", "value":"true"} [hat]{"entity":"hat", "group":"hat_group"}
+    - number of [males]{"entity":"gender", "value":"male"} [not]{"entity":"is_with", "group":"bag_group", "value":"false"} [carrys]{"entity":"is_with", "group":"bag_group", "value":"true"} [satchel]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - looks for all those [brings]{"entity":"is_with", "group":"bag_group", "value":"true"} [luggage]{"entity":"bag", "group":"bag_group", "value":"bag"} and [wear]{"entity":"is_with", "group":"hat_group", "value":"true"} [beret]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - i am looks for all people [wear]{"entity":"is_with", "group":"hat_group", "value":"true"} [cap]{"entity":"hat", "group":"hat_group", "value":"hat"} and [brings]{"entity":"is_with", "group":"bag_group", "value":"true"} [tote bag]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - i am look for people [put on]{"entity": "is_with", "group": "hat_group", "value": "true"} [sombrero]{"entity": "hat", "group": "hat_group", "value":"hat"} and [not take]{"entity":"is_with", "group":"bag_group", "value":"false"} [case]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - look for everybody [with]{"entity":"is_with", "group":"bag_group", "value":"true"} [carrie]{"entity":"bag", "group":"bag_group", "value":"bag"} and [not]{"entity": "is_with", "group": "hat_group", "value": "false"} [headgar]{"entity": "hat", "group": "hat_group", "value":"hat"}
+    - look for all [ladies]{"entity":"gender", "value":"female"} that [not have]{"entity": "is_with", "group": "hat_group", "value": "false"} [tam]{"entity": "hat", "group": "hat_group", "value":"hat"}
+    - how many people [don't have]{"entity": "is_with", "group": "hat_group", "value": "false"} [bonnet]{"entity": "hat", "group": "hat_group", "value":"hat"} and [with]{"entity": "is_with", "group": "bag_group", "value": "true"} [luggage]{"entity": "bag", "group": "bag_group", "value":"bag"}
+    - i am searching every [wives]{"entity":"gender", "value":"female"} [not wear]{"entity": "is_with", "group": "hat_group", "value": "false"} [topper]{"entity": "hat", "group": "hat_group", "value":"hat"} 
+    - count the number of [men]{"entity":"gender", "value":"male"} with a [cap]{"entity":"hat", "group":"hat_group", "value":"hat"} and a [backpack]{"entity":"bag", "group":"bag_group", "value":"bag"}
+    - count all the [women]{"entity":"gender", "value":"female"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [fedora]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    - how many [girls]{"entity":"gender", "value":"female"} are carrying a [tote bag]{"entity":"bag", "group":"bag_group", "value":"bag"} and [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [beret]{"entity":"hat", "group":"hat_group"}
+    - enumerate the people [not holding]{"entity":"is_with", "group":"bag_group", "value":"false"} a [handbag]{"entity":"bag", "group":"bag_group"} and [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [beanie]{"entity":"hat", "group":"hat_group"}
+    - identify the [ladies]{"entity":"gender", "value":"female"} with [no]{"entity":"is_with", "group":"bag_group", "value":"false"} [purses]{"entity":"bag", "group":"bag_group"} and [without]{"entity":"is_with", "group":"hat_group", "value":"false"} a [helmet]{"entity":"hat", "group":"hat_group"}
+    - calculate the number of individuals [carrying]{"entity":"is_with", "group":"bag_group", "value":"true"} a [knapsack]{"entity":"bag", "group":"bag_group"} and [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [sombrero]{"entity":"hat", "group":"hat_group"}
+    - how many [young men]{"entity":"gender", "value":"male"} are [with]{"entity":"is_with", "group":"hat_group", "value":"true"} a [topper]{"entity":"hat", "group":"hat_group"} and [not]{"entity":"is_with", "group":"bag_group", "value":"false"} [luggage]{"entity":"bag", "group":"bag_group"}
+    - determine the count of [old men]{"entity":"gender", "value":"male"} [with no]{"entity":"is_with", "group":"hat_group", "value":"false"} [bonnets]{"entity":"hat", "group":"hat_group"} and [not carrying]{"entity":"is_with", "group":"bag_group", "value":"false"} [carriers]{"entity":"bag", "group":"bag_group"}
+    - search for all [sisters]{"entity":"gender", "value":"female"} [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} a [tam]{"entity":"hat", "group":"hat_group"} and [holding]{"entity":"is_with", "group":"bag_group", "value":"true"} [satchels]{"entity":"bag", "group":"bag_group"}
+    - how many [guys]{"entity":"gender", "value":"male"} are [putting on]{"entity":"is_with", "group":"hat_group", "value":"true"} [helmets]{"entity":"hat", "group":"hat_group"} and [without]{"entity":"is_with", "group":"bag_group", "value":"false"} a [sack]{"entity":"bag", "group":"bag_group"} 
+    - count everybody [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"}  [line one]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+    - count everybody [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}
+    - count everybody [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line three]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - count everybody [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line four]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - count everybody [don't cross]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line one]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+    - count everybody [don't cross]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}
+    - count everybody [don't cross]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line three]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - count everybody [don't cross]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line four]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Count everybody [who crossed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line one]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+    - Find all people [that passed through]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line two]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}
+    - Show everyone [walking across]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - How many people [crossed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}?
+    - Count all people [who didn't cross]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line one]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+    - Find people [who avoided]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line two]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}
+    - Show me everyone [not passing through]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line three]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - How many people [didn't walk across]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line four]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}?
+    - Count everyone [who crossed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line one]{"entity":"trajectory", "group":"trajectory_group", "value":"1"} and [line two]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}
+    - Find all people [who passed through]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line three]{"entity":"trajectory", "group":"trajectory_group", "value":"3"} and [line four]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Show everyone [who walked across]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line two]{"entity":"trajectory", "group":"trajectory_group", "value":"2"} and [line four]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Count all people [who didn't cross]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line one]{"entity":"trajectory", "group":"trajectory_group", "value":"1"} or [line three]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - Find everyone [who avoided]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line two]{"entity":"trajectory", "group":"trajectory_group", "value":"2"} and [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"}
+    - Show me people [not passing through]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line three]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - Count everyone [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [more than]{"entity":"condition", "group":"trajectory_group", "value":"more"} [three times]{"entity":"number", "group":"trajectory_group", "value":"3"} along the [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+    - Find people [who crossed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [less than]{"entity":"condition", "group":"trajectory_group", "value":"less"} [two times]{"entity":"number", "group":"trajectory_group", "value":"2"} on [line two]{"entity":"trajectory", "group":"trajectory_group", "value":"2"}
+    - Show everyone [that passed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [exactly]{"entity":"condition", "group":"trajectory_group", "value":"exactly"} [four times]{"entity":"number", "group":"trajectory_group", "value":"4"} near the [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"}
+    - How many people [avoided]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"} [less than]{"entity":"condition", "group":"trajectory_group", "value":"less"} [two times]{"entity":"number", "group":"trajectory_group", "value":"2"}?
+    - Count all individuals [who crossed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [more than]{"entity":"condition", "group":"trajectory_group", "value":"more"} [seven times]{"entity":"number", "group":"trajectory_group", "value":"7"} on the [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+    - How many people [crossed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"} [exactly]{"entity":"condition", "group":"trajectory_group", "value":"exactly"} [five times]{"entity":"number", "group":"trajectory_group", "value":"5"}?
+    - Find all people [not crossing]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"} and [more than]{"entity":"condition", "group":"trajectory_group", "value":"more"} [six times]{"entity":"number", "group":"trajectory_group", "value":"6"}.
+    - Show everyone [that crossed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 4]{"entity":"trajectory", "group":"trajectory_group", "value":"4"} [less than]{"entity":"condition", "group":"trajectory_group", "value":"less"} [three times]{"entity":"number", "group":"trajectory_group", "value":"3"}.
+    - Find people [avoiding]{"entity":"is_with", "group":"trajectory_group", "value":"false"} [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"} [exactly]{"entity":"condition", "group":"trajectory_group", "value":"exactly"} [two times]{"entity":"number", "group":"trajectory_group", "value":"2"}.
+    - Count everyone [who crossed]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [line 2]{"entity":"trajectory", "group":"trajectory_group", "value":"2"} and [line 3]{"entity":"trajectory", "group":"trajectory_group", "value":"3"} [more than]{"entity":"condition", "group":"trajectory_group", "value":"more"} [four times]{"entity":"number", "group":"trajectory_group", "value":"4"}.
+    - How many person are there?
+    - And how many of them are [male]{"entity":"gender", "value":"male"}?
+    - And how many of them are [female]{"entity":"gender", "value":"female"}?
+    - how many of them are male{"entity":"gender", "value":"male"}?
+    - how many of them are [female]{"entity":"gender", "value":"female"}?
+    - how many [guys]{"entity":"gender", "value":"male"} are [putting on]{"entity":"is_with", "group":"hat_group", "value":"true"} [helmets]{"entity":"hat", "group":"hat_group"} and [without]{"entity":"is_with", "group":"bag_group", "value":"false"} a [sack]{"entity":"bag", "group":"bag_group"}
+    - count the [men]{"entity":"gender", "value":"male"} who are [wearing]{"entity":"is_with", "group":"hat_group", "value":"true"} [hats]{"entity":"hat", "group":"hat_group"} and [not carrying]{"entity":"is_with", "group":"bag_group", "value":"false"} a [bag]{"entity":"bag", "group":"bag_group"}
+    - how many [males]{"entity":"gender", "value":"male"} have [caps]{"entity":"hat", "group":"hat_group"} on and [no]{"entity":"is_with", "group":"bag_group", "value":"false"} [backpack]{"entity":"bag", "group":"bag_group"}
+    - count [guys]{"entity":"gender", "value":"male"} with [hats]{"entity":"hat", "group":"hat_group"} and [without]{"entity":"is_with", "group":"bag_group", "value":"false"} a [bag]{"entity":"bag", "group":"bag_group"}
+    - Count every man [cross]{"entity":"is_with", "group":"trajectory_group", "value":"true"} [more than]{"entity":"condition", "group":"trajectory_group", "value":"more"} [three times]{"entity":"number", "group":"trajectory_group", "value":"3"} along the [line 1]{"entity":"trajectory", "group":"trajectory_group", "value":"1"}
+
+- intent: male_female
+  examples: |
+    - Are there more boys or girls [wear]{"entity":"is_with", "group":"hat_group", "value":"true"} a [hat]{"entity":"hat", "group":"hat_group"}?
+    - Are there more boys or girls [with]{"entity":"is_with", "group":"bag_group", "value":"true"} a [bag]{"entity":"bag", "group":"bag_group"}?
+
+- intent: group_position
+  examples: |
+    - Who is the [winner]{"entity":"group", "value":"1"} of the competition?
+    - Tell me the [first]{"entity":"group", "value":"1"} group.
+    - Which group [won]{"entity":"group", "value":"1"} the competition?
+    - Who is the [champion]{"entity":"group", "value":"1"} group?
+    - Can you tell me the [winning]{"entity":"group", "value":"1"} group?
+    - Which group is ranked [number one]{"entity":"group", "value":"1"}?
+    - Tell me the [second]{"entity":"group", "value":"2"} group.
+    - Tell me the [second]{"entity":"group", "value":"2"} place.
+    - Which group is in [second place]{"entity":"group", "value":"2"}?
+    - Who came in [second]{"entity":"group", "value":"2"} in the competition?
+    - Can you tell me about the [third]{"entity":"group", "value":"3"} group?
+    - Who secured the [third]{"entity":"group", "value":"3"} position?
+    - What group is [number three]{"entity":"group", "value":"3"} in the ranking?
+    - Tell me about the [fourth]{"entity":"group", "value":"4"} group.
+    - Who is in [fourth place]{"entity":"group", "value":"4"}?
+    - Which group is ranked [number four]{"entity":"group", "value":"4"}?
+    - Tell me the [fifth]{"entity":"group", "value":"5"} group.
+    - Who is ranked [fifth]{"entity":"group", "value":"5"} in the competition?
+    - Which group is in [fifth place]{"entity":"group", "value":"5"}?
+    - What about the [sixth]{"entity":"group", "value":"6"} group?
+    - Who is in [sixth place]{"entity":"group", "value":"6"}?
+    - Can you tell me about the [seventh]{"entity":"group", "value":"7"} group?
+    - Which group is ranked [seventh place]{"entity":"group", "value":"7"}?
+    - What about the [eighth]{"entity":"group", "value":"8"} group?
+    - Who is in [eighth place]{"entity":"group", "value":"8"}?
+    - Which group is [number eight]{"entity":"group", "value":"8"}?
+    - Tell me about the [ninth]{"entity":"group", "value":"9"} group.
+    - Who is ranked [ninth]{"entity":"group", "value":"9"} in the standings?
+    - What group is in [ninth place]{"entity":"group", "value":"9"}?
+    - Tell me about the [tenth]{"entity":"group", "value":"10"} group.
+    - Which group is ranked [tenth]{"entity":"group", "value":"10"}?
+    - Who is in [eleventh place]{"entity":"group", "value":"11"}?
+    - What group is ranked [twelfth]{"entity":"group", "value":"12"}?
+    - Can you tell me about the [thirteenth]{"entity":"group", "value":"13"} group?
+    - Which group is in [fourteenth place]{"entity":"group", "value":"14"}?
+    - Who is ranked [fifteenth]{"entity":"group", "value":"15"}?
+    - Tell me about the [sixteenth]{"entity":"group", "value":"16"} group.
+    - Who is in [sixteenth]{"entity":"group", "value":"16"} place?
+    - Which group is ranked [seventeenth]{"entity":"group", "value":"17"}?
+    - What about the [eighteenth]{"entity":"group", "value":"18"} group?
+    - Who is in [eighteenth]{"entity":"group", "value":"18"} place?
+    - Can you tell me about the [nineteenth]{"entity":"group", "value":"19"} group?
+    - Which group is in [nineteenth place]{"entity":"group", "value":"19"}?
+    - Who is ranked [twentieth]{"entity":"group", "value":"20"}?
+    - Tell me about the [twentieth]{"entity":"group", "value":"20"} group.
+    - Who is the [winner]{"entity":"group", "value":"1"} of the competition?
+    - Tell me the [1st]{"entity":"group", "value":"1"} group.
+    - Which group [won]{"entity":"group", "value":"1"} the competition?
+    - Who is the [champion]{"entity":"group", "value":"1"} group?
+    - Can you tell me the [winning]{"entity":"group", "value":"1"} group?
+    - Which group is ranked [number one]{"entity":"group", "value":"1"}?
+    - Tell me the [2nd]{"entity":"group", "value":"2"} group.
+    - Which group is in [2nd place]{"entity":"group", "value":"2"}?
+    - Who came in [2nd]{"entity":"group", "value":"2"} in the competition?
+    - Can you tell me about the [3rd]{"entity":"group", "value":"3"} group?
+    - Who secured the [3rd place]{"entity":"group", "value":"3"} position?
+    - What group is [number three]{"entity":"group", "value":"3"} in the ranking?
+    - Tell me about the [4th]{"entity":"group", "value":"4"} group.
+    - Who is in [4th place]{"entity":"group", "value":"4"}?
+    - Which group is ranked [number four]{"entity":"group", "value":"4"}?
+    - Tell me the [5th]{"entity":"group", "value":"5"} group.
+    - Who is ranked [5th]{"entity":"group", "value":"5"} in the competition?
+    - Which group is in [5th place]{"entity":"group", "value":"5"}?
+    - What about the [6th]{"entity":"group", "value":"6"} group?
+    - Who is in [6th place]{"entity":"group", "value":"6"}?
+    - Can you tell me about the [7th]{"entity":"group", "value":"7"} group?
+    - Which group is ranked [7th place]{"entity":"group", "value":"7"}?
+    - What about the [8th]{"entity":"group", "value":"8"} group?
+    - Who is in [8th place]{"entity":"group", "value":"8"}?
+    - Which group is [number eight]{"entity":"group", "value":"8"}?
+    - Tell me about the [9th]{"entity":"group", "value":"9"} group.
+    - Who is ranked [9th]{"entity":"group", "value":"9"} in the standings?
+    - What group is in [9th place]{"entity":"group", "value":"9"}?
+    - Tell me about the [10th]{"entity":"group", "value":"10"} group.
+    - Which group is ranked [10th]{"entity":"group", "value":"10"}?
+    - Who is in [11th place]{"entity":"group", "value":"11"}?
+    - What group is ranked [12th]{"entity":"group", "value":"12"}?
+    - Can you tell me about the [13th]{"entity":"group", "value":"13"} group?
+    - Which group is in [14th place]{"entity":"group", "value":"14"}?
+    - Who is ranked [15th]{"entity":"group", "value":"15"}?
+    - Tell me about the [16th]{"entity":"group", "value":"16"} group.
+    - Who is in [16th place]{"entity":"group", "value":"16"}?
+    - Which group is ranked [17th]{"entity":"group", "value":"17"}?
+    - What about the [18th]{"entity":"group", "value":"18"} group?
+    - Who is in [18th place]{"entity":"group", "value":"18"}?
+    - Can you tell me about the [19th]{"entity":"group", "value":"19"} group?
+    - Which group is in [19th place]{"entity":"group", "value":"19"}?
+    - Who is ranked [20th]{"entity":"group", "value":"20"}?
+    - Tell me about the [20th]{"entity":"group", "value":"20"} group.
+
+
+- intent: group_components
+  examples: |
+    - Who are the members of the group?
+    - Tell me the components of the group.
+    - Who are the participants in the group?
+    - Can you list the group members?
+    - What are the names of the people in the group?
+    - Who are the components of the group?
+    - Can you tell me who is in the group?
+    - I want to know the members of the group.
+    - Tell me the people in the group.
+
+- intent: new_ranking
+  examples: |
+    - tell me the [top 3]{"entity":"n_top", "value":"3"} based on trajectory score
+    - tell me the [top 2]{"entity":"n_top", "value":"2"} based on trajectory score
+    - tell me the [top 1]{"entity":"n_top", "value":"1"} based on trajectory score
+    - tell me the [top 4]{"entity":"n_top", "value":"4"} based on trajectory score
+    - tell me the [top 5]{"entity":"n_top", "value":"5"} based on trajectory score
+    - tell me the [top 6]{"entity":"n_top", "value":"6"} based on trajectory score
+    - tell me the [top 7]{"entity":"n_top", "value":"7"} based on trajectory score
+    - tell me the [top 8]{"entity":"n_top", "value":"8"} based on trajectory score
+    - tell me the [top 9]{"entity":"n_top", "value":"9"} based on trajectory score
+    - tell me the [top 10]{"entity":"n_top", "value":"10"} based on trajectory score
+
+- intent: group_score
+  examples: |
+    - What's the score?
+    - Can you provide the score?
+    - What is the final score?
+    - What's the overall score?
+    - How high is the score?
+    - What is the current score?
+    - What's the latest score?
+    - Can the score be shared?
+
+
+# ---------- SYNONYMS ----------
+- synonym: female
+  examples: |
+    - girl
+    - woman
+    - young girl
+    - gal
+    - lady
+    - sister
+    - old woman
+    - young woman
+    - daughter
+    - miss
+    - mum
+    - mother
+    - grandmother
+    - aunt
+    - female cousin
+    - niece
+    - wife
+    - mother-in-law
+    - daughter-in-law
+    - stepsister
+    - stepmother
+    - girlfriend
+    - female friend
+    - stepdaughter
+    - madam
+    - girls
+    - women
+    - young Girls
+    - gals
+    - ladies
+    - sisters
+    - old Women
+    - young Women
+    - daughters
+    - misses
+    - mums
+    - moms
+    - mothers
+    - grandmothers
+    - aunts
+    - female Cousins
+    - nieces
+    - wives
+    - mothers-in-law
+    - daughters-in-law
+    - stepsisters
+    - stepmothers
+    - girlfriends
+    - female Friends
+    - stepdaughters
+    - madams
+    - females
+
+- synonym: male
+  examples: |
+    - man
+    - young man
+    - old man
+    - boy
+    - guy
+    - brother
+    - dude
+    - son
+    - sir
+    - father
+    - grandfather
+    - uncle
+    - nephew
+    - husband
+    - father-in-law
+    - son-in-law
+    - stepbrother
+    - stepfather
+    - boyfriend
+    - stepson
+    - men
+    - young Men
+    - old Men
+    - boys
+    - guys
+    - brothers
+    - dudes
+    - sons
+    - sirs
+    - fathers
+    - grandfathers
+    - uncles
+    - cousins
+    - nephews
+    - husbands
+    - fathers-in-law
+    - sons-in-law
+    - stepbrothers
+    - stepfathers
+    - boyfriends
+    - friends
+    - stepsons
+    - males
+
+- synonym: hat
+  examples: |
+    - beret
+    - cap
+    - headgear
+    - bonnet
+    - beanie
+    - fedora
+    - sombrero
+    - tam
+    - topper
+    - helmet
+    - cloche
+    - visor
+    - cowboy hat
+    - bowler hat
+    - trilby
+    - bucket hat
+    - hard hat
+    - flat cap
+    - chef's hat
+    - boater hat
+    - straw hat
+    - pillbox hat
+    - turban
+    - fez
+    - mortarboard
+    - sun hat
+    - top hat
+    - ushanka
+    - peaked cap
+    - wide-brimmed hat
+    - Panama hat
+    - head
+
+- synonym: bag
+  examples: |
+    - sack
+    - pouch
+    - tote
+    - purse
+    - backpack
+    - rucksack
+    - knapsack
+    - luggage
+    - carrier
+    - satchel
+    - case
+    - tote bag
+    - carryall
+    - handbag
+    - briefcase
+    - duffel bag
+    - crossbody bag
+    - gym bag
+    - shopping bag
+    - bucket bag
+    - clutch
+    - messenger bag
+    - hobo bag
+    - drawstring bag
+    - shoulder bag
+    - sling bag
+    - fanny pack
+    - wristlet
+    - diaper bag
+    - vanity bag
+    - evening bag
+    - saddle bag
+    - travel bag
+
+- regex: trajectory
+  examples: |
+    - line (one|two|three|four)
+    - line (1|2|3|4)
+
+- regex: number
+  examples: |
+    - (two|three|four) times
+    - one time
+
+- regex: trajectory
+  examples: |
+    - line (one|two|three|four)
+    - line (1|2|3|4)
+
+- regex: id
+  examples: |
+    - ID (1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25)
+    - ID(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25)
+    - I'd (1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25)
+
