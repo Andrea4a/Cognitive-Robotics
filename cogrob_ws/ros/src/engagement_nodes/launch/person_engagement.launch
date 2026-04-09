@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="engagement_nodes" type="detector_node.py" name="detector_node" output="screen" />
+  <node pkg="engagement_nodes" type="person_engagement_node.py" name="person_engagement_node" output="screen" />
+  <node pkg="engagement_nodes" type="visualization_node.py" name="visualization_node" output="screen" />
+</launch>
