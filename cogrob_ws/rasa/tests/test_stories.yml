@@ -1,0 +1,191 @@
+version: "3.1"
+
+stories:
+- story: happy path 1
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_happy
+
+- story: happy path 2
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_happy
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: sad path 1
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      not good
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      not good
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      not really
+    intent: deny
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - user: |
+      are you a bot?
+    intent: bot_challenge
+  - action: utter_iamabot
+
+- story: activate form ask with no info
+  steps:
+  - user: |
+      I am looking for a person
+    intent: ask_with_no_info
+  - action: action_all_slots_reset
+  - action: utter_no_info
+  - action: person_form
+  - active_loop: person_form
+
+- story: activate form ask with info
+  steps:
+  - user: |
+      Have you noticed a [girl]{"entity":"gender", "value":"female"} [with]{"entity":"is_with", "group":"bag_group", "value":"true"} a [backpack]{"entity":"bag", "group":"bag_group", "value":"bag"}?
+    intent: ask_with_info
+    entities:
+      - hat: "hat"
+      - trajectory: "line 1"
+  - slot_was_set:
+    - hat: "hat"
+    - trajectory:
+      - "[1]"
+  - action: action_correct_entities_values
+  - action: utter_ask_other_info
+  - intent: affirm
+  - action: person_form
+  - active_loop: person_form
+
+- story: test give explanation rule
+  steps:
+  - user: |
+      I'm searching for a [woman]{"entity":"gender", "value":"female"} wearing a [hat]{"entity":"hat", "group":"hat_group", "value":"hat"}
+    intent: ask_with_info
+    entities:
+      - gender: "female"
+      - hat: "hat"
+  - slot_was_set:
+    - gender: "female"
+    - hat: "hat"
+  - action: action_correct_entities_values
+  - action: person_form
+  - active_loop: person_form
+  - intent: explain
+  - action: utter_explain
+  - active_loop: null
+
+- story: stop the form test story
+  steps:
+  - user: |
+      I'm looking for a person
+    intent: ask_with_info
+  - action: action_correct_entities_values
+  - action: person_form
+  - active_loop: person_form
+  - intent: stop_form
+  - action: action_submit_find
+  - action: action_deactivate_loop
+  - active_loop: null
+
+- story: test wrong slot response
+  steps:
+  - user: |
+      I'm looking for a person
+    intent: ask_with_info
+  - action: action_correct_entities_values
+  - action: utter_ask_other_info
+  - intent: affirm
+  - action: person_form
+  - active_loop: person_form
+  - action: utter_ask_gender
+  - user: |
+      male
+    intent: inform_info
+    entities:
+      - gender: "male"
+  - slot_was_set:
+    - gender: "male"
+  - action: utter_remember
+  - action: person_form
+  - active_loop: null
+  - action: action_submit_find
+
+- story: test form
+  steps:
+  - user: |
+      I am looking for a person
+    intent: ask_with_no_info
+  - action: action_all_slots_reset
+  - action: utter_no_info
+  - action: person_form
+  - active_loop: person_form
+  - user: |
+      Male
+    intent: inform_info
+    entities:
+      - gender: "male"
+  - slot_was_set:
+    - gender: "male"
+  - action: person_form
+  - user: |
+      Line 1
+    intent: inform_info
+  - slot_was_set:
+    - trajectory:
+      - "[1]"
+  - active_loop: null
+  - action: utter_remember
+  - action: action_submit_find
+
+- story: happy path correction
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_handle_form
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
