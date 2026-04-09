@@ -1,0 +1,151 @@
+{
+    "people": [
+        {
+            "id": 1,
+            "gender": "male",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [1,4,3]
+        },
+        {
+            "id": 2,
+            "gender": "male",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [2,4,2,3,4,3]
+        },
+        {
+            "id": 3,
+            "gender": "female",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [4,3]
+        },
+        {
+            "id": 4,
+            "gender": "female",
+            "hat": "true",
+            "bag": "true",
+            "trajectory": [1]
+        },
+        {
+            "id": 5,
+            "gender": "male",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [2,4,3,4,3,4]
+        },
+        {
+            "id": 6,
+            "gender": "male",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [2,4,1]
+        },
+        {
+            "id": 7,
+            "gender": "male",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [4]
+        },
+        {
+            "id": 8,
+            "gender": "male",
+            "hat": "true",
+            "bag": "true",
+            "trajectory": [2,3,4]
+        },
+        {
+            "id": 9,
+            "gender": "male",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [2,4,3,4,3]
+        },
+        {
+            "id": 10,
+            "gender": "male",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [2,4]
+        },
+        {
+            "id": 11,
+            "gender": "female",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [3]
+        },
+        {
+            "id": 12,
+            "gender": "male",
+            "hat": "false",
+            "bag": "false",
+            "trajectory": [2]
+        },
+        {
+            "id": 13,
+            "gender": "male",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [3,1,1,1,1,1]
+        },
+        {
+            "id": 14,
+            "gender": "male",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [1,4,3]
+        },
+        {
+            "id": 15,
+            "gender": "male",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [1,1,1,1]
+        },
+        {
+            "id": 16,
+            "gender": "male",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": [1,4,3]
+        },
+        {
+            "id": 17,
+            "gender": "male",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": []
+        },
+        {
+            "id": 18,
+            "gender": "male",
+            "hat": "true",
+            "bag": "true",
+            "trajectory": [1]
+        },
+        {
+            "id": 19,
+            "gender": "male",
+            "hat": "true",
+            "bag": "true",
+            "trajectory": [2,2,3]
+        },
+        {
+            "id": 20,
+            "gender": "female",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": []
+        },
+        {
+            "id": 21,
+            "gender": "female",
+            "hat": "false",
+            "bag": "true",
+            "trajectory": []
+        }
+    ]
+}

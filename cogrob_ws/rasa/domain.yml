@@ -1,0 +1,331 @@
+version: "3.1"
+
+session_config:
+  session_expiration_time: 3
+  carry_over_slots_to_new_session: false
+
+define: &UNKOWN ""
+intents:
+- affirm
+- affirm_with_entity
+- deny_with_entity
+- mood_great
+- mood_unhappy
+- deny
+- doubt
+- ask_with_info
+- ask_with_no_info
+- bot_challenge
+- goodbye
+- greet
+- inform_info
+- count_people
+- purpose_bot
+- explain
+- stop_form
+- group_position
+- group_components
+- group_score
+- ask_id
+- thanks
+- male_female
+- new_ranking
+- ask_specific
+- lost_competition
+
+entities:
+- gender
+- hat
+- bag
+- trajectory
+- is_with
+- number
+- condition
+- group
+- id
+- n_top
+
+slots:
+
+  hat:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_intent
+      intent: doubt
+      value: *UNKOWN
+      conditions:
+      - active_loop: person_form
+        requested_slot: hat
+    - type: from_intent
+      intent: affirm
+      value: true
+      conditions:
+      - active_loop: person_form
+        requested_slot: hat
+    - type: from_intent
+      intent: deny
+      value: false
+      conditions:
+      - active_loop: person_form
+        requested_slot: hat
+    - type: from_entity
+      entity: hat
+      intent: affirm_with_entity
+      conditions:
+        - active_loop: person_form
+          requested_slot: hat
+    - type: from_entity
+      entity: hat
+      group: hat_group
+      intent: deny_with_entity
+      conditions:
+        - active_loop: person_form
+          requested_slot: hat
+    - type: from_entity
+      entity: hat
+      group: hat_group
+        
+  bag:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_intent
+      intent: doubt
+      value: *UNKOWN
+      conditions:
+      - active_loop: person_form
+        requested_slot: bag
+    - type: from_intent
+      intent: affirm
+      value: true
+      conditions:
+      - active_loop: person_form
+        requested_slot: bag
+    - type: from_intent
+      intent: deny
+      value: false
+      conditions:
+      - active_loop: person_form
+        requested_slot: bag
+    - type: from_entity
+      entity: bag
+      intent: affirm_with_entity
+      conditions:
+        - active_loop: person_form
+          requested_slot: bag
+    - type: from_entity
+      entity: bag
+      group: bag_group
+      intent: deny_with_entity
+      conditions:
+        - active_loop: person_form
+          requested_slot: bag
+    - type: from_entity
+      entity: bag
+      group: bag_group
+
+  gender:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_intent
+      intent: doubt
+      value: *UNKOWN
+      conditions:
+      - active_loop: person_form
+        requested_slot: gender
+    - type: from_entity
+      entity: gender
+
+  is_with_hat:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: is_with
+        group: hat_group
+
+  is_with_bag:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: is_with
+        group: bag_group
+
+  trajectory:
+    type: list
+    influence_conversation: false
+    mappings:
+    - type: from_intent
+      intent: doubt
+      value: *UNKOWN
+      conditions:
+      - active_loop: person_form
+        requested_slot: trajectory
+    - type: from_entity
+      entity: trajectory
+      group: trajectory_group
+      conditions:
+      - active_loop: person_form
+        requested_slot: trajectory
+    - type: from_entity
+      entity: trajectory
+      group: trajectory_group
+  
+  is_with_trajectory:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: is_with
+        group: trajectory_group
+
+  number:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: number
+        group: trajectory_group
+
+  condition:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: condition
+        group: trajectory_group
+
+  group:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: group
+  
+  id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: id
+
+  n_top:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: n_top
+
+        
+
+
+forms:
+  person_form:
+    required_slots:
+      - gender
+      - bag
+      - hat
+      - trajectory
+
+
+responses:
+  utter_greet:
+  - text: Hey i'm pepper! How can I help you?
+  - text: Hi, how can I help you?
+  - text: Hello, I'm the guardian of the shopping center, if you need help just ask.
+  utter_cheer_up:
+  - text: "Stay strong. Things will get better with time."
+  - text: "You're capable of handling this challenge. Keep going."
+  - text: "Every difficult moment is a step toward something better."
+  - text: "Take a deep breath and move forward. You've got this."
+  - text: "Even small progress is still progress. Keep moving."
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: Was it helpful?
+  utter_handle_form:
+  - text: Sorry, I first need to finish the questions. After it you can ask me other.
+  utter_happy:
+  - text: "I'm glad to hear that. Keep it up!"
+  - text: "That's great! I hope your day keeps getting better."
+  - text: "Nice to hear! Is there something special that made you feel this way?"
+  - text: "Fantastic! If you’d like to share the reason, I’m here to listen."
+  - text: "Happiness is a wonderful thing. I hope it lasts for a long time."
+  - text: "That’s awesome! Wishing you even more great moments ahead."
+  utter_sad_competition_loss:
+  - text: "I'm sorry it didn’t go as you hoped. You still gave your best, and that matters."
+  - text: "Losing is part of the journey. Every experience teaches something, and next time you’ll be even more prepared."
+  - text: "I understand it’s disappointing, but don’t let this define your worth. You still have many chances to prove yourself."
+  - text: "Every competition is an opportunity to grow. Take the best from this experience and use it to improve."
+  - text: "Even the greatest have faced defeats before reaching success. Keep working hard, and your time will come."
+  - text: "It’s not easy to accept a loss, but what matters is not stopping. There will be other opportunities, and you’ll come back stronger."
+  utter_goodbye:
+  - text: Bye
+  - text: Goodbye
+  - text: See you
+  - text: See you next time
+  utter_purpose:
+  - text: I can give you information about people in the mall and about the competion. If you give me more information I can be more specific.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_remember:
+  - text: Thanks. I'll remember that.
+  utter_searching_person:
+  - text: "Let me check the information for you..."
+  - text: "I'm searching for the person you described."
+  - text: "Hold on, I'm analyzing the data."
+  utter_ask_other_info:
+  - text: Can you give me more information?
+  - text: For a more detailed research, can you give me more information?
+  utter_no_info:
+  - text: Can you give more info?
+  - text: I don't have enough information... Can you give me more details?
+  # utter to ask information about the gender
+  utter_ask_gender:
+  - text: Can you tell me the gender?
+  - text: Is it a male or a female?
+  - text: What gender is it?
+  # utter to ask information about the hat
+  utter_ask_hat:
+  - text: Does this person have a hat?
+  - text: Does it wear a hat?
+  - text: was it wearing a hat?
+  # utter to ask information about the bag
+  utter_ask_bag:
+  - text: Does this person have a bag?
+  - text: Does it have a bag?
+  - text: was it wearing a bag?
+  utter_ask_trajectory:
+  - text: "Can you tell me the trajectory?"
+  - text: "What is the trajectory? "
+  - text: "Please provide the trajectory."
+  utter_explain:
+  - text: I need this information to improve research
+  utter_dont_understand:
+  - text: I'm sorry, I don't understand. Could you please repeat?
+  - text: I didn't catch that. Could you please repeat?
+  - text: Could you rephrase what you just said? I didn't understand.
+  utter_ask_new_search:
+  - text: Would you like to initiate another search?
+  - text: Are you interested in conducting a different search?
+  - text: Do you need assistance in finding another person or having information about competion?
+  - text: Would you like to start a different search?
+
+actions:
+- action_submit_find
+- action_submit_count
+- action_all_slots_reset
+- action_reset_previous_slots
+- action_correct_entities_values
+- action_unkown_info
+- validate_person_form
+- action_submit_group
+- action_submit_components
+- action_submit_score
+- action_submit_id
+- action_submit_gender
+- action_submit_ranking
+- action_submit_specific
+

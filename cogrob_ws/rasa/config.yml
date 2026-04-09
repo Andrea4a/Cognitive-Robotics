@@ -1,0 +1,35 @@
+recipe: default.v1
+
+language: en
+
+pipeline:
+ - name: WhitespaceTokenizer
+ - name: RegexFeaturizer
+ - name: LexicalSyntacticFeaturizer
+ - name: RegexEntityExtractor
+   use_regexes: True
+   allowed_entity_types: ["number","trajectory","id"]
+ - name: CountVectorsFeaturizer
+   analyzer: char_wb
+   min_ngram: 1
+   max_ngram: 4
+ - name: DIETClassifier
+   epochs: 100 # 100
+   constrain_similarities: true
+   entity_types_to_exclude: ["number","trajectory","id"]
+   ignore_entities:
+    gender: ["the"]
+ - name: EntitySynonymMapper
+ - name: FallbackClassifier
+   threshold: 0.6
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+- name: MemoizationPolicy
+- name: RulePolicy
+- name: TEDPolicy
+  max_history: 5
+  epochs: 100
+  constrain_similarities: true
+assistant_id: 20231015-135518-cool-drivetrain

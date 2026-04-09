@@ -1,0 +1,226 @@
+{
+    "results": [
+        {
+            "Position": 1,
+            "Group": 1,
+            "PFS": 0.929,
+            "LFS": 0.762,
+            "GFS": 0.929,
+            "BFS": 0.929,
+            "HFS": 0.929,
+            "AFS": 0.895,
+            "Members": [
+                "Sessa Antonio",
+                "Molinario Angelo",
+                "Martano Pietro",
+                "Ranauro Massimiliano"
+            ]
+        },
+        {
+            "Position": 2,
+            "Group": 6,
+            "PFS": 0.867,
+            "LFS": 0.941,
+            "GFS": 0.867,
+            "BFS": 0.867,
+            "HFS": 0.867,
+            "AFS": 0.882,
+            "Members": [
+                "Alberti Andrea",
+                "Attianese Carmine",
+                "Capaldo Vincenzo",
+                "Esposito Paolo"
+            ]
+        },
+        {
+            "Position": 3,
+            "Group": 8,
+            "PFS": 0.897,
+            "LFS": 1.0,
+            "GFS": 0.828,
+            "BFS": 0.759,
+            "HFS": 0.828,
+            "AFS": 0.862,
+            "Members": [
+                "Micera Valentina",
+                "Sbardella Raffaele",
+                "Setolino Ciro",
+                "Volpe Jacopo"
+            ]
+        },
+        {
+            "Position": 4,
+            "Group": 5,
+            "PFS": 0.765,
+            "LFS": 1.0,
+            "GFS": 0.765,
+            "BFS": 0.765,
+            "HFS": 0.706,
+            "AFS": 0.8,
+            "Members": [
+                "Del Gaudio  Nunzio ",
+                "De Angelis Christian Salvatore",
+                "Aliberti Carmine",
+                "Casella Giovanni"
+            ]
+        },
+        {
+            "Position": 5,
+            "Group": 3,
+            "PFS": 0.867,
+            "LFS": 0.737,
+            "GFS": 0.867,
+            "BFS": 0.667,
+            "HFS": 0.8,
+            "AFS": 0.787,
+            "Members": [
+                "Martelli Marco",
+                "Marino Andrea",
+                "Marmo Alberto",
+                "Pasquale Alessandro"
+            ]
+        },
+        {
+            "Position": 6,
+            "Group": 10,
+            "PFS": 0.96,
+            "LFS": 0.235,
+            "GFS": 0.96,
+            "BFS": 0.72,
+            "HFS": 0.88,
+            "AFS": 0.715,
+            "Members": [
+                "Lamb Giovanni",
+                "Zottarelli Egidio",
+                "Saturnino Fabrizio",
+                "Orlando Palma"
+            ]
+        },
+        {
+            "Position": 7,
+            "Group": 12,
+            "PFS": 0.765,
+            "LFS": 0.941,
+            "GFS": 0.765,
+            "BFS": 0.412,
+            "HFS": 0.765,
+            "AFS": 0.729,
+            "Members": [
+                "Rescigno Andrea",
+                "Zappullo Pietro",
+                "Petti Pasquale",
+                "Lamberti Mattia"
+            ]
+        },
+        {
+            "Position": 8,
+            "Group": 7,
+            "PFS": 0.839,
+            "LFS": 0.4,
+            "GFS": 0.774,
+            "BFS": 0.774,
+            "HFS": 0.839,
+            "AFS": 0.725,
+            "Members": [
+                "Martino Michele",
+                "Senese Benito",
+                "Ommeniello Giovanni",
+                "Nicol\u00f2 Emanuele Alfonso"
+            ]
+        },
+        {
+            "Position": 9,
+            "Group": 9,
+            "PFS": 0.929,
+            "LFS": 0.047,
+            "GFS": 0.714,
+            "BFS": 0.714,
+            "HFS": 0.929,
+            "AFS": 0.667,
+            "Members": [
+                "Oltean Bianca",
+                "Oltean Miruna",
+                "Lebourg Quentin",
+                "Engel Alexandre"
+            ]
+        },
+        {
+            "Position": 10,
+            "Group": 14,
+            "PFS": 0.867,
+            "LFS": 0.242,
+            "GFS": 0.867,
+            "BFS": 0.533,
+            "HFS": 0.8,
+            "AFS": 0.662,
+            "Members": [
+                "Marotta Giuseppe",
+                "Tramice Davide",
+                "Zaza Vincent"
+            ]
+        },
+        {
+            "Position": 11,
+            "Group": 2,
+            "PFS": 0.765,
+            "LFS": 0.56,
+            "GFS": 0.294,
+            "BFS": 0.765,
+            "HFS": 0.588,
+            "AFS": 0.594,
+            "Members": [
+                "Magliulo Marco",
+                "Moraru Maximilian Marius",
+                "Schir\u00f2 Valentina Carmen",
+                "Romano Christian"
+            ]
+        },
+        {
+            "Position": 12,
+            "Group": 13,
+            "PFS": 0.703,
+            "LFS": 0.0,
+            "GFS": 0.703,
+            "BFS": 0.703,
+            "HFS": 0.703,
+            "AFS": 0.562,
+            "Members": [
+                "Russomando Antonio",
+                "Memoli Luca",
+                "Solimeno Raffaele"
+            ]
+        },
+        {
+            "Position": 13,
+            "Group": 4,
+            "PFS": 0.542,
+            "LFS": 0.4,
+            "GFS": 0.542,
+            "BFS": 0.542,
+            "HFS": 0.542,
+            "AFS": 0.513,
+            "Members": [
+                "Cardamone Agostino",
+                "Dobrev Viktor Yanchev",
+                "Ferraioli Chiara",
+                "Antonucci Asja"
+            ]
+        },
+        {
+            "Position": 14,
+            "Group": 15,
+            "PFS": 0.51,
+            "LFS": 0.4,
+            "GFS": 0.51,
+            "BFS": 0.51,
+            "HFS": 0.51,
+            "AFS": 0.488,
+            "Members": [
+                "Nappo Domenico",
+                "Prugno Siniscalchi  Samuel",
+                "Valentino Miriam",
+                "Parolise Gaetano"
+            ]
+        }
+    ]
+}
